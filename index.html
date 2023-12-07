@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>FUNCAP55 Functional Capacity</title>
+
+    <script src="./index.js" defer></script>
+  </head>
+  <body onload="loadFormDataOnLoad()">
+    <div class="container">
+      <div class="header">
+        FUNCAP55 <br />
+        Functional Capacity Questionnaire
+        <p class="para">
+          This questionnaire evaluates your functional capacity for a range of
+          activities. No days are the same. Base your response on an average day
+          during the last month, not the worst nor the best. <br />
+          If a question concerns an activity that you have not performed, such
+          as showering while seated because you always shower standing up, then
+          score as you think this activity would have affected you. Items
+          described include necessary activities to perform them. <br />
+          Example: "Going to a shop for groceries" includes getting dressed and
+          as necessary travelling. <br />
+          It is a good idea to answer the questionnaire together with someone
+          who sees you in everyday life.
+        </p>
+      </div>
+
+      <div class="answers">
+        0: I cannot do this. <br />
+        1: My capacity will be severely reduced for at least three days. <br />
+        2: I can do little else on the same day and for one to two days
+        afterwards. <br />
+        3: I can do little else on the same day. <br />
+        4: I must limit other activities on the same day. <br />
+        5: This rarely affects other activities. <br />
+        6: Unproblematic - does not affect other activities.
+      </div>
+
+      <div class="section">
+        <div class="title">
+          A - Personal hygiene / Basic functions
+          <span id="title-average-a" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            1-Using the toilet (not bedpan or bedside commode)
+          </div>
+
+          <select id="q1" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            2-Brushing your teeth without assistance
+          </div>
+
+          <select id="q2" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">3-Showering seated, with assistance</div>
+
+          <select id="q3" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            4-Showering seated, without assistance
+          </div>
+
+          <select id="q4" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">5-Showering standing up</div>
+
+          <select id="q5" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            6-Getting up and staying out of bed for approx. 1 hour
+          </div>
+
+          <select id="q6" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">7-Getting dressed in regular clothes</div>
+
+          <select id="q7" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearA" class="btn">CLEAR SECTION</button>
+          <button id="saveA" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          B - Walking - moving around
+          <span id="title-average-b" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            8-Walking a short distance indoors, from one room to another
+          </div>
+
+          <select id="q8" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            9-Walking a short continuous distance, approx. 100m (length of a
+            football field), in or outdoors
+          </div>
+
+          <select id="q9" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            10-Walking between approx. 100m and 1km on level ground (length of 1
+            to 10 football fields)
+          </div>
+
+          <select id="q10" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            11-Going for a longer walk. approx. 1km(0.6 miles), mostly level
+            ground
+          </div>
+
+          <select id="q11" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            12-Going for a longer walk. approx. 1km(0.6 miles), hilly or varied
+            terrain
+          </div>
+
+          <select id="q12" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            13-Physical activity with increased heart rate, for approx. 15 min
+          </div>
+
+          <select id="q13" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            14-Physical activity with increased heart rate, for approx. half
+            hour
+          </div>
+
+          <select id="q14" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearB" class="btn">CLEAR SECTION</button>
+          <button id="saveB" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          C - Being upright
+          <span id="title-average-c" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            15-Sitting in bed for approx. half hour
+          </div>
+
+          <select id="q15" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            16-Sitting in an upright chair (dining chair) with feet on floor for
+            approx. 10 minutes
+          </div>
+
+          <select id="q16" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            17-Sitting in an upright chair (dining chair) with feet on floor for
+            approx. 2 hours
+          </div>
+
+          <select id="q17" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            18-Standing up for approx. 5 minutes, e.g. while queuing or while
+            cooking
+          </div>
+
+          <select id="q18" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            19-Standing up for a long time. approx. half hour
+          </div>
+
+          <select id="q19" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearC" class="btn">CLEAR SECTION</button>
+          <button id="saveC" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          D - Activities in the home
+          <span id="title-average-d" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            20-Light housework (dusting, tidying etc.) for approx. half hour
+            continuously
+          </div>
+
+          <select id="q20" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            21-Heavier housework (washing floors, vacuuming etc) for approx.
+            half hour continuously
+          </div>
+
+          <select id="q21" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            22-Laundry (sorting, hanging up to dry and folding)
+          </div>
+
+          <select id="q22" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            23-Making a simple cold meal, such as a sandwich or cereal
+          </div>
+
+          <select id="q23" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">24-Cooking a simple hot meal</div>
+
+          <select id="q24" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            25-Cooking a complicated meal from scratch, approx. 1 hour of
+            preparation
+          </div>
+
+          <select id="q25" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearD" class="btn">CLEAR SECTION</button>
+          <button id="saveD" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          E - Communication
+          <span id="title-average-e" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">26-Speaking a few words</div>
+
+          <select id="q26" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            27-Having a conversation for approx. 5 minutes
+          </div>
+
+          <select id="q27" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            28-Having a conversation for approx. half hours
+          </div>
+
+          <select id="q28" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">29-Writing a short message by hand</div>
+
+          <select id="q29" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            30-Participating in a conversation with three people for approx.
+            half hour
+          </div>
+
+          <select id="q30" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            31-Socializing with friends for approx. 1 hour
+          </div>
+
+          <select id="q31" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            32-Participating in a dinner party, party or family event
+          </div>
+
+          <select id="q32" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearE" class="btn">CLEAR SECTION</button>
+          <button id="saveE" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          F - Activities outside your home
+          <span id="title-average-f" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">33-Stepping right outside your home</div>
+
+          <select id="q33" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            34-Going on a necessary errand, such as a doctor's appointment
+          </div>
+
+          <select id="q34" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">35-Going to a shop for groceries</div>
+
+          <select id="q35" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            36-Doing enjoyable leisure activities, such as going to a cafe,
+            non-essential shopping etc
+          </div>
+
+          <select id="q36" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            37-Riding as a passenger in a car for approx. 15 minutes
+          </div>
+
+          <select id="q37" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            38-Using public transport (bus or train)
+          </div>
+
+          <select id="q38" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            39-Participating in organized leisure activities such as classes,
+            sports etc
+          </div>
+
+          <select id="q39" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearF" class="btn">CLEAR SECTION</button>
+          <button id="saveF" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          G - Reactions to light and sound
+          <span id="title-average-g" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            40-Staying in a room with dim lighting for approx. half hour
+          </div>
+
+          <select id="q40" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            41-Staying in a room with normal lighting, without sunglasses for
+            approx. 1 hour
+          </div>
+
+          <select id="q41" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            42-Staying outdoors in daylight without sunglasses for approx. 2
+            hours
+          </div>
+
+          <select id="q42" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            43-Staying in an environment with the sound of a few people in quiet
+            conversation for approx. 1 hour
+          </div>
+
+          <select id="q43" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            44-Staying in a noisy environment, (shopping mall, cafe or open plan
+            office) for approx. 1 hour
+          </div>
+
+          <select id="q44" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            45-Going to a cinema, concert etc. with high noise levels
+          </div>
+
+          <select id="q45" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearG" class="btn">CLEAR SECTION</button>
+          <button id="saveG" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">
+          H - Concentration
+          <span id="title-average-h" class="title-average">-</span>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            46-Reading a short text, such as a mobile phone text message
+          </div>
+
+          <select id="q46" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">47-Reading fiction/light reading</div>
+
+          <select id="q47" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            48-Reading and understanding a non-fiction text, such as an official
+            document one A4 page long
+          </div>
+
+          <select id="q48" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            49-Performing simple mental arithmetic
+          </div>
+
+          <select id="q49" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            50-Writing short messages on a smartphone or tablet
+          </div>
+
+          <select id="q50" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            51-Using social media to stay in touch with others
+          </div>
+
+          <select id="q51" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">52-Watching TV (series, news)</div>
+
+          <select id="q52" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            53-Focusing on a task for approx. 10 minutes continuously
+          </div>
+
+          <select id="q53" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            54-Focusing on a task for approx. 2 hours continuously
+          </div>
+
+          <select id="q54" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="question">
+          <div class="question-text">
+            55-Managing a full working day (non-physical work such as office
+            work, classes or lectures)
+          </div>
+
+          <select id="q55" class="question-answer">
+            <option value="">-</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+
+        <div class="buttons">
+          <button id="clearH" class="btn">CLEAR SECTION</button>
+          <button id="saveH" class="btn">SAVE</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="score">
+          Your Score:
+          <span id="average-total" class="total-average">-</span>
+        </div>
+
+        <div class="buttons">
+          <button id="clearAll" class="btn">CLEAR ALL</button>
+          <button id="saveAll" class="btn">SAVE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
