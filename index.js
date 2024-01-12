@@ -27,6 +27,9 @@ const saveF = document.getElementById("saveF");
 const saveG = document.getElementById("saveG");
 const saveH = document.getElementById("saveH");
 const saveAll = document.getElementById("saveAll");
+const showGraph = document.getElementById("showGraph");
+const hideGraph = document.getElementById("hideGraph");
+const graph = document.getElementById("graph");
 
 let totalAverageA;
 let totalAverageB;
@@ -455,6 +458,18 @@ saveH.addEventListener("click", function () {
 
 saveAll.addEventListener("click", function () {
   saveFormData();
+});
+
+showGraph.addEventListener("click", function () {
+  graph.classList.remove(`hidden`);
+  hideGraph.classList.remove(`hidden`);
+  showGraph.classList.add(`hidden`);
+});
+
+hideGraph.addEventListener("click", function () {
+  graph.classList.add(`hidden`);
+  hideGraph.classList.add(`hidden`);
+  showGraph.classList.remove(`hidden`);
 });
 
 function saveFormData() {
