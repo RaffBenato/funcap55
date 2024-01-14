@@ -54,14 +54,14 @@ const scoreCircleT = document.getElementById("score-circle-t");
 const verticalLine = document.getElementById("vertical-line");
 const segmentWidth = verticalLine.offsetWidth;
 
-let totalAverageA;
-let totalAverageB;
-let totalAverageC;
-let totalAverageD;
-let totalAverageE;
-let totalAverageF;
-let totalAverageG;
-let totalAverageH;
+let totalAverageA = null;
+let totalAverageB = null;
+let totalAverageC = null;
+let totalAverageD = null;
+let totalAverageE = null;
+let totalAverageF = null;
+let totalAverageG = null;
+let totalAverageH = null;
 
 for (let i = 1; i <= 55; i++) {
   const currentQuestionId = "q" + i;
