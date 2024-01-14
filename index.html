@@ -29,7 +29,7 @@
         </p>
       </div>
 
-      <div class="answers">
+      <div id="answers" class="answers">
         0: I cannot do this. <br />
         1: My capacity will be severely reduced for at least three days. <br />
         2: I can do little else on the same day and for one to two days
@@ -1080,11 +1080,148 @@
         <div class="buttons">
           <button id="clearAll" class="btn">CLEAR ALL</button>
           <button id="saveAll" class="btn">SAVE</button>
-          <button id="showGraph" class="btn">SHOW GRAPH</button>
-          <button id="hideGraph" class="btn hidden">HIDE GRAPH</button>
+          <button id="showGraph" class="btn hidden">TRENDS</button>
         </div>
       </div>
-      <img id="graph" class="hidden" src="graph.jpg" alt="Graph" />
+      <div id="summary" class="summary">
+        <h1 class="summary-title">Summary</h1>
+        <div class="summary-section">
+          <div class="summary-section-tile">A</div>
+          <div class="summary-section-block">
+            <div id="score-circle-a" class="score-circle"></div>
+            <div id="vertical-line" class="vertical-line"></div>
+            <div class="vertical-line">0</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">2</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">4</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">6</div>
+          </div>
+          <div id="summary-score-a" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">B</div>
+          <div class="summary-section-block">
+            <div id="score-circle-b" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="summary-score-b" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">C</div>
+          <div class="summary-section-block">
+            <div id="score-circle-c" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="summary-score-c" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">D</div>
+          <div class="summary-section-block">
+            <div id="score-circle-d" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="summary-score-d" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">E</div>
+          <div class="summary-section-block">
+            <div id="score-circle-e" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="summary-score-e" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">F</div>
+          <div class="summary-section-block">
+            <div id="score-circle-f" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="summary-score-f" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">G</div>
+          <div class="summary-section-block">
+            <div id="score-circle-g" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="summary-score-g" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">H</div>
+          <div class="summary-section-block">
+            <div id="score-circle-h" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="summary-score-h" class="summary-section-score"></div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile">Total</div>
+          <div class="summary-section-block">
+            <div id="score-circle-t" class="score-circle"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line">0</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">2</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">4</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">6</div>
+          </div>
+          <div id="summary-score-t" class="summary-section-score">-</div>
+        </div>
+      </div>
+      <img id="graph" src="graph.jpg" alt="" />
     </div>
   </body>
 </html>

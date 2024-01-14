@@ -28,8 +28,31 @@ const saveG = document.getElementById("saveG");
 const saveH = document.getElementById("saveH");
 const saveAll = document.getElementById("saveAll");
 const showGraph = document.getElementById("showGraph");
-const hideGraph = document.getElementById("hideGraph");
-const graph = document.getElementById("graph");
+
+const answers = document.getElementById("answers");
+const summary = document.getElementById("summary");
+
+const summaryScoreA = document.getElementById("summary-score-a");
+const summaryScoreB = document.getElementById("summary-score-b");
+const summaryScoreC = document.getElementById("summary-score-c");
+const summaryScoreD = document.getElementById("summary-score-d");
+const summaryScoreE = document.getElementById("summary-score-e");
+const summaryScoreF = document.getElementById("summary-score-f");
+const summaryScoreG = document.getElementById("summary-score-g");
+const summaryScoreH = document.getElementById("summary-score-h");
+const summaryScoreT = document.getElementById("summary-score-t");
+
+const scoreCircleA = document.getElementById("score-circle-a");
+const scoreCircleB = document.getElementById("score-circle-b");
+const scoreCircleC = document.getElementById("score-circle-c");
+const scoreCircleD = document.getElementById("score-circle-d");
+const scoreCircleE = document.getElementById("score-circle-e");
+const scoreCircleF = document.getElementById("score-circle-f");
+const scoreCircleG = document.getElementById("score-circle-g");
+const scoreCircleH = document.getElementById("score-circle-h");
+const scoreCircleT = document.getElementById("score-circle-t");
+const verticalLine = document.getElementById("vertical-line");
+const segmentWidth = verticalLine.offsetWidth;
 
 let totalAverageA;
 let totalAverageB;
@@ -323,6 +346,96 @@ function calculateScore() {
   } else {
     averageTotal.innerHTML = "-";
   }
+
+  if (averageTotal.innerHTML === "-") {
+    summaryScoreT.innerHTML = "";
+    scoreCircleT.style.display = "none";
+  } else {
+    summaryScoreT.innerHTML = averageTotal.innerHTML;
+    scoreCircleT.style.display = "block";
+    scoreCircleT.style.left =
+      (parseFloat(summaryScoreT.innerHTML) / 8) * 100 + `%`;
+    scoreCircleT.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+
+  if (totalAverageA === null) {
+    scoreCircleA.style.display = "none";
+    summaryScoreA.innerHTML = "-";
+  } else {
+    summaryScoreA.innerHTML = totalAverageA;
+    scoreCircleA.style.display = "block";
+    scoreCircleA.style.left = (totalAverageA / 8) * 100 + `%`;
+    scoreCircleA.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+
+  if (totalAverageB === null) {
+    scoreCircleB.style.display = "none";
+    summaryScoreB.innerHTML = "-";
+  } else {
+    summaryScoreB.innerHTML = totalAverageB;
+    scoreCircleB.style.display = "block";
+    scoreCircleB.style.left = (totalAverageB / 8) * 100 + `%`;
+    scoreCircleB.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+
+  if (totalAverageC === null) {
+    scoreCircleC.style.display = "none";
+    summaryScoreC.innerHTML = "-";
+  } else {
+    summaryScoreC.innerHTML = totalAverageC;
+    scoreCircleC.style.display = "block";
+    scoreCircleC.style.left = (totalAverageC / 8) * 100 + `%`;
+    scoreCircleC.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+
+  if (totalAverageD === null) {
+    scoreCircleD.style.display = "none";
+    summaryScoreD.innerHTML = "-";
+  } else {
+    summaryScoreD.innerHTML = totalAverageD;
+    scoreCircleD.style.display = "block";
+    scoreCircleD.style.left = (totalAverageD / 8) * 100 + `%`;
+    scoreCircleD.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+
+  if (totalAverageE === null) {
+    scoreCircleE.style.display = "none";
+    summaryScoreE.innerHTML = "-";
+  } else {
+    summaryScoreE.innerHTML = totalAverageE;
+    scoreCircleE.style.display = "block";
+    scoreCircleE.style.left = (totalAverageE / 8) * 100 + `%`;
+    scoreCircleE.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+  if (totalAverageF === null) {
+    scoreCircleF.style.display = "none";
+    summaryScoreF.innerHTML = "-";
+  } else {
+    summaryScoreF.innerHTML = totalAverageF;
+    scoreCircleF.style.display = "block";
+    scoreCircleF.style.left = (totalAverageF / 8) * 100 + `%`;
+    scoreCircleF.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+
+  if (totalAverageG === null) {
+    scoreCircleG.style.display = "none";
+    summaryScoreG.innerHTML = "-";
+  } else {
+    summaryScoreG.innerHTML = totalAverageG;
+    scoreCircleG.style.display = "block";
+    scoreCircleG.style.left = (totalAverageG / 8) * 100 + `%`;
+    scoreCircleG.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
+
+  if (totalAverageH === null) {
+    scoreCircleH.style.display = "none";
+    summaryScoreH.innerHTML = "-";
+  } else {
+    summaryScoreH.innerHTML = totalAverageH;
+    scoreCircleH.style.display = "block";
+    scoreCircleH.style.left = (totalAverageH / 8) * 100 + `%`;
+    scoreCircleH.style.transform = `translateX(${segmentWidth - 10}px)`;
+  }
 }
 
 clearA.addEventListener("click", function () {
@@ -461,15 +574,7 @@ saveAll.addEventListener("click", function () {
 });
 
 showGraph.addEventListener("click", function () {
-  graph.classList.remove(`hidden`);
-  hideGraph.classList.remove(`hidden`);
-  showGraph.classList.add(`hidden`);
-});
-
-hideGraph.addEventListener("click", function () {
-  graph.classList.add(`hidden`);
-  hideGraph.classList.add(`hidden`);
-  showGraph.classList.remove(`hidden`);
+  window.location.href = "trends.html";
 });
 
 function saveFormData() {
@@ -508,3 +613,22 @@ function loadFormData() {
     }
   }
 }
+
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
+function handleIntersection(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      answers.style.display = "none";
+    } else {
+      answers.style.display = "block";
+    }
+  });
+}
+
+const observer = new IntersectionObserver(handleIntersection, options);
+observer.observe(summary);
