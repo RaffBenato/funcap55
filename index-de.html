@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>FUNCAP55 Functional Capacity</title>
+    <title>FUNCAP55 Functional Capacity - DE-German language</title>
 
     <script src="./index.js" defer></script>
   </head>
@@ -13,42 +13,47 @@
     <div class="container">
       <div class="header">
         FUNCAP55 <br />
-        Functional Capacity Questionnaire
+        Fragebogen zur funktionalen Kapazität
         <p class="para">
-          This questionnaire evaluates your functional capacity for a range of
-          activities. No days are the same. Base your response on an average day
-          during the last month, not the worst nor the best. <br />
-          If a question concerns an activity that you have not performed, such
-          as showering while seated because you always shower standing up, then
-          score as you think this activity would have affected you. Items
-          described include necessary activities to perform them. <br />
-          Example: "Going to a shop for groceries" includes getting dressed and
-          as necessary travelling. <br />
-          It is a good idea to answer the questionnaire together with someone
-          who sees you in everyday life.
+          Dieser Fragebogen bewertet Ihre funktionelle Kapazität für eine Reihe
+          von Aktivitäten. Kein Tag ist wie der andere. Gehen Sie bei Ihrer
+          Antwort von einem durchschnittlichen Tag des letzten Monats aus, nicht
+          vom schlechtesten oder besten. <br />
+          Wenn sich eine Frage auf eine Tätigkeit bezieht, die Sie nicht
+          ausgeführt haben, z. B. Duschen im Sitzen, weil Sie immer im Stehen
+          duschen, dann bewerten Sie die Frage so, wie Sie glauben, dass diese
+          Tätigkeit Sie beeinträchtigt hätte. Zu den beschriebenen Tätigkeiten
+          gehören auch die zu ihrer Ausführung erforderlichen Aktivitäten.
+          <br />
+          Beispiel: "Zum Einkaufen gehen" schließt das Anziehen und ggf. die
+          Fahrt ein. <br />
+          Es ist eine gute Idee, den Fragebogen gemeinsam mit einer Person zu
+          beantworten, die Sie im Alltag erlebt.
         </p>
       </div>
 
       <div id="answers" class="answers">
-        0: I cannot do this. <br />
-        1: My capacity will be severely reduced for at least three days. <br />
-        2: I can do little else on the same day and for one to two days
-        afterwards. <br />
-        3: I can do little else on the same day. <br />
-        4: I must limit other activities on the same day. <br />
-        5: This rarely affects other activities. <br />
-        6: Unproblematic - does not affect other activities.
+        0: Ich schaffe das nicht. <br />
+        1: Meine Kapazität wird für mindestens drei Tage stark eingeschränkt
+        sein. <br />
+        2: Ich kann am selben Tag und für ein bis zwei Tage danach kaum etwas
+        anderes tun. <br />
+        3: Ich kann am selben Tag kaum etwas anderes tun. <br />
+        4: Ich muss andere Aktivitäten am selben Tag einschränken. <br />
+        5: Andere Tätigkeiten werden dadurch kaum beeinträchtigt. <br />
+        6: Unproblematisch - beeinträchtigt keine anderen Aktivitäten.
       </div>
 
       <div class="section">
         <div class="title">
-          A - Personal hygiene / Basic functions
+          A - Körperpflege / Grundfunktionen
           <span id="title-average-a" class="title-average">-</span>
         </div>
 
         <div class="question">
           <div class="question-text">
-            1-Using the toilet (not bedpan or bedside commode)
+            1-Benutzung der Toilette (nicht der Bettpfanne oder des
+            Toilettenstuhls)
           </div>
 
           <select id="q1" class="question-answer">
@@ -64,9 +69,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">
-            2-Brushing your teeth without assistance
-          </div>
+          <div class="question-text">2-Zähneputzen ohne Hilfe</div>
 
           <select id="q2" class="question-answer">
             <option value="">-</option>
@@ -81,7 +84,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">3-Showering seated, with assistance</div>
+          <div class="question-text">3-Duschen im Sitzen, mit Hilfe</div>
 
           <select id="q3" class="question-answer">
             <option value="">-</option>
@@ -96,9 +99,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">
-            4-Showering seated, without assistance
-          </div>
+          <div class="question-text">4-Duschen im Sitzen, ohne Hilfe</div>
 
           <select id="q4" class="question-answer">
             <option value="">-</option>
@@ -113,7 +114,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">5-Showering standing up</div>
+          <div class="question-text">5-Duschen im Stehen</div>
 
           <select id="q5" class="question-answer">
             <option value="">-</option>
@@ -129,7 +130,7 @@
 
         <div class="question">
           <div class="question-text">
-            6-Getting up and staying out of bed for approx. 1 hour
+            6-Aufstehen und außerhalb des Bettes bleiben für ca. 1 Stunde
           </div>
 
           <select id="q6" class="question-answer">
@@ -145,7 +146,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">7-Getting dressed in regular clothes</div>
+          <div class="question-text">7-Sich normale Kleidung anziehen</div>
 
           <select id="q7" class="question-answer">
             <option value="">-</option>
@@ -160,20 +161,20 @@
         </div>
 
         <div class="buttons">
-          <button id="clearA" class="btn">CLEAR SECTION</button>
-          <button id="saveA" class="btn">SAVE</button>
+          <button id="clearA" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveA" class="btn">SPEICHERN</button>
         </div>
       </div>
 
       <div class="section">
         <div class="title">
-          B - Walking - moving around
+          B - Gehen - sich fortbewegen
           <span id="title-average-b" class="title-average">-</span>
         </div>
 
         <div class="question">
           <div class="question-text">
-            8-Walking a short distance indoors, from one room to another
+            8-Drinnen eine kurze Strecke von einem Raum zum anderen gehen
           </div>
 
           <select id="q8" class="question-answer">
@@ -190,8 +191,8 @@
 
         <div class="question">
           <div class="question-text">
-            9-Walking a short continuous distance, approx. 100m (length of a
-            football field), in or outdoors
+            9-Gehen einer kurzen durchgehenden Strecke, ca. 100 m (Länge eines
+            Fußballfeldes), drinnen oder draußen
           </div>
 
           <select id="q9" class="question-answer">
@@ -208,8 +209,8 @@
 
         <div class="question">
           <div class="question-text">
-            10-Walking between approx. 100m and 1km on level ground (length of 1
-            to 10 football fields)
+            10-Gehen einer Strecke zwischen 100m und 1km am Stück, auf ebenem
+            Gelände (Länge von 1 bis 10 Fußballfeldern)
           </div>
 
           <select id="q10" class="question-answer">
@@ -226,8 +227,7 @@
 
         <div class="question">
           <div class="question-text">
-            11-Going for a longer walk. approx. 1km(0.6 miles), mostly level
-            ground
+            11-Ein längerer Spaziergang. ca. 1km, meist ebenes Gelände
           </div>
 
           <select id="q11" class="question-answer">
@@ -244,8 +244,8 @@
 
         <div class="question">
           <div class="question-text">
-            12-Going for a longer walk. approx. 1km(0.6 miles), hilly or varied
-            terrain
+            12-Längerer Spaziergang. ca. 1km, hügeliges oder abwechslungsreiches
+            Gelände
           </div>
 
           <select id="q12" class="question-answer">
@@ -262,7 +262,8 @@
 
         <div class="question">
           <div class="question-text">
-            13-Physical activity with increased heart rate, for approx. 15 min
+            13-Körperliche Aktivität mit erhöhter Herzfrequenz, für ca. 15
+            Minuten
           </div>
 
           <select id="q13" class="question-answer">
@@ -279,8 +280,8 @@
 
         <div class="question">
           <div class="question-text">
-            14-Physical activity with increased heart rate, for approx. half
-            hour
+            14-Körperliche Aktivität mit erhöhter Herzfrequenz, für ca. eine
+            halbe Stunde
           </div>
 
           <select id="q14" class="question-answer">
@@ -296,20 +297,20 @@
         </div>
 
         <div class="buttons">
-          <button id="clearB" class="btn">CLEAR SECTION</button>
-          <button id="saveB" class="btn">SAVE</button>
+          <button id="clearB" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveB" class="btn">SPEICHERN</button>
         </div>
       </div>
 
       <div class="section">
         <div class="title">
-          C - Being upright
+          C - Aufrecht sein
           <span id="title-average-c" class="title-average">-</span>
         </div>
 
         <div class="question">
           <div class="question-text">
-            15-Sitting in bed for approx. half hour
+            15-Sitzen im Bett, für ca. eine halbe Stunde
           </div>
 
           <select id="q15" class="question-answer">
@@ -326,8 +327,8 @@
 
         <div class="question">
           <div class="question-text">
-            16-Sitting in an upright chair (dining chair) with feet on floor for
-            approx. 10 minutes
+            16-Sitzen auf einem aufrechten Stuhl (Esszimmerstuhl) mit den Füßen
+            auf dem Boden, für ca. 10 Minuten
           </div>
 
           <select id="q16" class="question-answer">
@@ -344,8 +345,8 @@
 
         <div class="question">
           <div class="question-text">
-            17-Sitting in an upright chair (dining chair) with feet on floor for
-            approx. 2 hours
+            17-Sitzen auf einem aufrechten Stuhl (Esszimmerstuhl) mit den Füßen
+            auf dem Boden, für ca. 2 Stunden
           </div>
 
           <select id="q17" class="question-answer">
@@ -362,8 +363,8 @@
 
         <div class="question">
           <div class="question-text">
-            18-Standing up for approx. 5 minutes, e.g. while queuing or while
-            cooking
+            18-Stehen für ca. 5 Minuten, z. B. beim Anstehen (beim Einkaufen)
+            oder beim Kochen
           </div>
 
           <select id="q18" class="question-answer">
@@ -380,7 +381,7 @@
 
         <div class="question">
           <div class="question-text">
-            19-Standing up for a long time. approx. half hour
+            19-Langes Stehen, für ca. eine halbe Stunde
           </div>
 
           <select id="q19" class="question-answer">
@@ -396,21 +397,21 @@
         </div>
 
         <div class="buttons">
-          <button id="clearC" class="btn">CLEAR SECTION</button>
-          <button id="saveC" class="btn">SAVE</button>
+          <button id="clearC" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveC" class="btn">SPEICHERN</button>
         </div>
       </div>
 
       <div class="section">
         <div class="title">
-          D - Activities in the home
+          D - Aktivitäten in der Wohnung
           <span id="title-average-d" class="title-average">-</span>
         </div>
 
         <div class="question">
           <div class="question-text">
-            20-Light housework (dusting, tidying etc.) for approx. half hour
-            continuously
+            20-Leichte Hausarbeit (Staubwischen, Aufräumen usw.) für ca. eine
+            halbe Stunde am Stück
           </div>
 
           <select id="q20" class="question-answer">
@@ -427,8 +428,8 @@
 
         <div class="question">
           <div class="question-text">
-            21-Heavier housework (washing floors, vacuuming etc) for approx.
-            half hour continuously
+            21-Schwerere Hausarbeit (Böden wischen, staubsaugen usw.) für ca.
+            eine halbe Stunde am Stück
           </div>
 
           <select id="q21" class="question-answer">
@@ -445,7 +446,7 @@
 
         <div class="question">
           <div class="question-text">
-            22-Laundry (sorting, hanging up to dry and folding)
+            22-Wäschewaschen (sortieren, zum Trocknen aufhängen und falten)
           </div>
 
           <select id="q22" class="question-answer">
@@ -462,7 +463,8 @@
 
         <div class="question">
           <div class="question-text">
-            23-Making a simple cold meal, such as a sandwich or cereal
+            23-Zubereitung einer einfachen kalten Mahlzeit, z. B. eines belegten
+            Brotes oder Müslis
           </div>
 
           <select id="q23" class="question-answer">
@@ -478,7 +480,9 @@
         </div>
 
         <div class="question">
-          <div class="question-text">24-Cooking a simple hot meal</div>
+          <div class="question-text">
+            24-Kochen einer einfachen warmen Mahlzeit
+          </div>
 
           <select id="q24" class="question-answer">
             <option value="">-</option>
@@ -494,8 +498,8 @@
 
         <div class="question">
           <div class="question-text">
-            25-Cooking a complicated meal from scratch, approx. 1 hour of
-            preparation
+            25-Eine komplizierte Mahlzeit von Grund auf zubereiten, ca. 1 Stunde
+            Vorbereitungszeit
           </div>
 
           <select id="q25" class="question-answer">
@@ -511,19 +515,19 @@
         </div>
 
         <div class="buttons">
-          <button id="clearD" class="btn">CLEAR SECTION</button>
-          <button id="saveD" class="btn">SAVE</button>
+          <button id="clearD" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveD" class="btn">SPEICHERN</button>
         </div>
       </div>
 
       <div class="section">
         <div class="title">
-          E - Communication
+          E - Kommunikation
           <span id="title-average-e" class="title-average">-</span>
         </div>
 
         <div class="question">
-          <div class="question-text">26-Speaking a few words</div>
+          <div class="question-text">26-Ein paar Worte sprechen</div>
 
           <select id="q26" class="question-answer">
             <option value="">-</option>
@@ -539,7 +543,7 @@
 
         <div class="question">
           <div class="question-text">
-            27-Having a conversation for approx. 5 minutes
+            27-Ein Gespräch führen, für ca. 5 Minuten
           </div>
 
           <select id="q27" class="question-answer">
@@ -556,7 +560,7 @@
 
         <div class="question">
           <div class="question-text">
-            28-Having a conversation for approx. half hours
+            28-Ein Gespräch führen, für ca. eine halbe Stunde
           </div>
 
           <select id="q28" class="question-answer">
@@ -572,7 +576,9 @@
         </div>
 
         <div class="question">
-          <div class="question-text">29-Writing a short message by hand</div>
+          <div class="question-text">
+            29-Eine kurze Nachricht von Hand schreiben
+          </div>
 
           <select id="q29" class="question-answer">
             <option value="">-</option>
@@ -588,8 +594,8 @@
 
         <div class="question">
           <div class="question-text">
-            30-Participating in a conversation with three people for approx.
-            half hour
+            30-Teilnahme an einem Gespräch mit drei Personen für ca. eine halbe
+            Stunde
           </div>
 
           <select id="q30" class="question-answer">
@@ -606,7 +612,7 @@
 
         <div class="question">
           <div class="question-text">
-            31-Socializing with friends for approx. 1 hour
+            31-Geselliges Zusammensein mit Freunden für ca. 1 Stunde
           </div>
 
           <select id="q31" class="question-answer">
@@ -623,7 +629,8 @@
 
         <div class="question">
           <div class="question-text">
-            32-Participating in a dinner party, party or family event
+            32-Teilnahme an einer Dinnerparty, einem Fest oder einer
+            Familienfeier
           </div>
 
           <select id="q32" class="question-answer">
@@ -639,19 +646,21 @@
         </div>
 
         <div class="buttons">
-          <button id="clearE" class="btn">CLEAR SECTION</button>
-          <button id="saveE" class="btn">SAVE</button>
+          <button id="clearE" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveE" class="btn">SPEICHERN</button>
         </div>
       </div>
 
       <div class="section">
         <div class="title">
-          F - Activities outside your home
+          F - Aktivitäten außerhalb der eigenen Wohnung
           <span id="title-average-f" class="title-average">-</span>
         </div>
 
         <div class="question">
-          <div class="question-text">33-Stepping right outside your home</div>
+          <div class="question-text">
+            33-Einen Schritt vor die Haustür machen
+          </div>
 
           <select id="q33" class="question-answer">
             <option value="">-</option>
@@ -667,7 +676,7 @@
 
         <div class="question">
           <div class="question-text">
-            34-Going on a necessary errand, such as a doctor's appointment
+            34-Erledigung einer notwendigen Besorgung, z. B. eines Arzttermins
           </div>
 
           <select id="q34" class="question-answer">
@@ -683,7 +692,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">35-Going to a shop for groceries</div>
+          <div class="question-text">35-Einkaufen von Lebensmitteln</div>
 
           <select id="q35" class="question-answer">
             <option value="">-</option>
@@ -699,8 +708,8 @@
 
         <div class="question">
           <div class="question-text">
-            36-Doing enjoyable leisure activities, such as going to a cafe,
-            non-essential shopping etc
+            36-Freizeitaktivitäten, die Spaß machen, wie z. B. Cafébesuche,
+            nicht lebensnotwendige Einkäufe usw.
           </div>
 
           <select id="q36" class="question-answer">
@@ -717,7 +726,7 @@
 
         <div class="question">
           <div class="question-text">
-            37-Riding as a passenger in a car for approx. 15 minutes
+            37-Autofahrt als Beifahrer für ca. 15 Minuten
           </div>
 
           <select id="q37" class="question-answer">
@@ -734,7 +743,7 @@
 
         <div class="question">
           <div class="question-text">
-            38-Using public transport (bus or train)
+            38-Benutzung öffentlicher Verkehrsmittel (Bus oder Bahn)
           </div>
 
           <select id="q38" class="question-answer">
@@ -751,8 +760,8 @@
 
         <div class="question">
           <div class="question-text">
-            39-Participating in organized leisure activities such as classes,
-            sports etc
+            39-Teilnahme an organisierten Freizeitaktivitäten wie Kurse, Sport
+            usw.
           </div>
 
           <select id="q39" class="question-answer">
@@ -768,20 +777,21 @@
         </div>
 
         <div class="buttons">
-          <button id="clearF" class="btn">CLEAR SECTION</button>
-          <button id="saveF" class="btn">SAVE</button>
+          <button id="clearF" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveF" class="btn">SPEICHERN</button>
         </div>
       </div>
 
       <div class="section">
         <div class="title">
-          G - Reactions to light and sound
+          G - Reaktionen auf Licht und Schall
           <span id="title-average-g" class="title-average">-</span>
         </div>
 
         <div class="question">
           <div class="question-text">
-            40-Staying in a room with dim lighting for approx. half hour
+            40-Aufenthalt in einem Raum mit gedämpftem Licht für ca. eine halbe
+            Stunde
           </div>
 
           <select id="q40" class="question-answer">
@@ -798,8 +808,8 @@
 
         <div class="question">
           <div class="question-text">
-            41-Staying in a room with normal lighting, without sunglasses for
-            approx. 1 hour
+            41-Aufenthalt in einem Raum mit normaler Beleuchtung, ohne
+            Sonnenbrille für ca. 1 Stunde
           </div>
 
           <select id="q41" class="question-answer">
@@ -816,8 +826,8 @@
 
         <div class="question">
           <div class="question-text">
-            42-Staying outdoors in daylight without sunglasses for approx. 2
-            hours
+            42-Aufenthalt im Freien bei Tageslicht ohne Sonnenbrille für ca. 2
+            Stunden
           </div>
 
           <select id="q42" class="question-answer">
@@ -834,8 +844,8 @@
 
         <div class="question">
           <div class="question-text">
-            43-Staying in an environment with the sound of a few people in quiet
-            conversation for approx. 1 hour
+            43-Aufenthalt in einer Umgebung mit dem Stimmengewirr einiger
+            weniger Menschen, die sich leise unterhalten, für ca. 1 Stunde
           </div>
 
           <select id="q43" class="question-answer">
@@ -852,8 +862,8 @@
 
         <div class="question">
           <div class="question-text">
-            44-Staying in a noisy environment, (shopping mall, cafe or open plan
-            office) for approx. 1 hour
+            44-Aufenthalt in einer lauten Umgebung (Einkaufszentrum, Cafe oder
+            Großraumbüro) für ca. 1 Stunde
           </div>
 
           <select id="q44" class="question-answer">
@@ -870,7 +880,7 @@
 
         <div class="question">
           <div class="question-text">
-            45-Going to a cinema, concert etc. with high noise levels
+            45-Kinobesuch, Konzertbesuch usw. mit hohem Lärmpegel
           </div>
 
           <select id="q45" class="question-answer">
@@ -886,8 +896,8 @@
         </div>
 
         <div class="buttons">
-          <button id="clearG" class="btn">CLEAR SECTION</button>
-          <button id="saveG" class="btn">SAVE</button>
+          <button id="clearG" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveG" class="btn">SPEICHERN</button>
         </div>
       </div>
 
@@ -899,7 +909,7 @@
 
         <div class="question">
           <div class="question-text">
-            46-Reading a short text, such as a mobile phone text message
+            46-Lesen eines kurzen Textes, z. B. einer Handy-SMS
           </div>
 
           <select id="q46" class="question-answer">
@@ -915,7 +925,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">47-Reading fiction/light reading</div>
+          <div class="question-text">47-Lesen von Romanen/leichte Lektüre</div>
 
           <select id="q47" class="question-answer">
             <option value="">-</option>
@@ -931,8 +941,8 @@
 
         <div class="question">
           <div class="question-text">
-            48-Reading and understanding a non-fiction text, such as an official
-            document one A4 page long
+            48-Lesen und Verstehen eines Sachtextes, z. B. eines offiziellen
+            Dokuments von einer A4-Seite
           </div>
 
           <select id="q48" class="question-answer">
@@ -948,9 +958,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">
-            49-Performing simple mental arithmetic
-          </div>
+          <div class="question-text">49-Einfaches Kopfrechnen</div>
 
           <select id="q49" class="question-answer">
             <option value="">-</option>
@@ -966,7 +974,7 @@
 
         <div class="question">
           <div class="question-text">
-            50-Writing short messages on a smartphone or tablet
+            50-Schreiben von kurzen Nachrichten auf einem Smartphone oder Tablet
           </div>
 
           <select id="q50" class="question-answer">
@@ -983,7 +991,7 @@
 
         <div class="question">
           <div class="question-text">
-            51-Using social media to stay in touch with others
+            51-Nutzen Soziale Medien, um mit anderen in Kontakt zu bleiben
           </div>
 
           <select id="q51" class="question-answer">
@@ -999,7 +1007,7 @@
         </div>
 
         <div class="question">
-          <div class="question-text">52-Watching TV (series, news)</div>
+          <div class="question-text">52-TV schauen (Serien, Nachrichten)</div>
 
           <select id="q52" class="question-answer">
             <option value="">-</option>
@@ -1015,7 +1023,7 @@
 
         <div class="question">
           <div class="question-text">
-            53-Focusing on a task for approx. 10 minutes continuously
+            53-Ununterbrochene Konzentration auf eine Aufgabe für ca. 10 Minuten
           </div>
 
           <select id="q53" class="question-answer">
@@ -1032,7 +1040,7 @@
 
         <div class="question">
           <div class="question-text">
-            54-Focusing on a task for approx. 2 hours continuously
+            54-Ununterbrochene Konzentration auf eine Aufgabe für ca. 2 Stunden
           </div>
 
           <select id="q54" class="question-answer">
@@ -1049,8 +1057,8 @@
 
         <div class="question">
           <div class="question-text">
-            55-Managing a full working day (non-physical work such as office
-            work, classes or lectures)
+            55-Bewältigung eines vollen Arbeitstages (nicht-körperliche Arbeit
+            wie Büroarbeit, Unterricht oder Vorlesungen)
           </div>
 
           <select id="q55" class="question-answer">
@@ -1066,8 +1074,8 @@
         </div>
 
         <div class="buttons">
-          <button id="clearH" class="btn">CLEAR SECTION</button>
-          <button id="saveH" class="btn">SAVE</button>
+          <button id="clearH" class="btn">ABSCHNITT LÖSCHEN</button>
+          <button id="saveH" class="btn">SPEICHERN</button>
         </div>
       </div>
 
@@ -1078,17 +1086,17 @@
         </div>
 
         <div class="buttons">
-          <button id="clearAll" class="btn">CLEAR ALL</button>
-          <button id="saveAll" class="btn">SAVE</button>
+          <button id="clearAll" class="btn">ALLES LÖSCHEN</button>
+          <button id="saveAll" class="btn">SPEICHERN</button>
           <button id="showGraph" class="btn hidden">TRENDS</button>
         </div>
       </div>
       <div id="summary" class="summary">
-        <h1 class="summary-title">Summary</h1>
+        <h1 class="summary-title">Zusammenfassung</h1>
         <div class="summary-section">
           <div class="summary-section-tile">A</div>
           <div class="summary-section-block">
-            <div id="score-circle-a" class="score-circle"></div>
+            <div id="score-circle-a" class="score-circle hidden"></div>
             <div id="vertical-line" class="vertical-line"></div>
             <div class="vertical-line">0</div>
             <div class="vertical-line-hidden"></div>
@@ -1103,7 +1111,7 @@
         <div class="summary-section">
           <div class="summary-section-tile">B</div>
           <div class="summary-section-block">
-            <div id="score-circle-b" class="score-circle"></div>
+            <div id="score-circle-b" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line-hidden"></div>
@@ -1118,7 +1126,7 @@
         <div class="summary-section">
           <div class="summary-section-tile">C</div>
           <div class="summary-section-block">
-            <div id="score-circle-c" class="score-circle"></div>
+            <div id="score-circle-c" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line-hidden"></div>
@@ -1133,7 +1141,7 @@
         <div class="summary-section">
           <div class="summary-section-tile">D</div>
           <div class="summary-section-block">
-            <div id="score-circle-d" class="score-circle"></div>
+            <div id="score-circle-d" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line-hidden"></div>
@@ -1148,7 +1156,7 @@
         <div class="summary-section">
           <div class="summary-section-tile">E</div>
           <div class="summary-section-block">
-            <div id="score-circle-e" class="score-circle"></div>
+            <div id="score-circle-e" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line-hidden"></div>
@@ -1163,7 +1171,7 @@
         <div class="summary-section">
           <div class="summary-section-tile">F</div>
           <div class="summary-section-block">
-            <div id="score-circle-f" class="score-circle"></div>
+            <div id="score-circle-f" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line-hidden"></div>
@@ -1178,7 +1186,7 @@
         <div class="summary-section">
           <div class="summary-section-tile">G</div>
           <div class="summary-section-block">
-            <div id="score-circle-g" class="score-circle"></div>
+            <div id="score-circle-g" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line-hidden"></div>
@@ -1193,7 +1201,7 @@
         <div class="summary-section">
           <div class="summary-section-tile">H</div>
           <div class="summary-section-block">
-            <div id="score-circle-h" class="score-circle"></div>
+            <div id="score-circle-h" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line-hidden"></div>
@@ -1206,9 +1214,9 @@
           <div id="summary-score-h" class="summary-section-score">-</div>
         </div>
         <div class="summary-section">
-          <div class="summary-section-tile">Total</div>
+          <div class="summary-section-tile">Gesamt</div>
           <div class="summary-section-block">
-            <div id="score-circle-t" class="score-circle"></div>
+            <div id="score-circle-t" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
             <div class="vertical-line">0</div>
             <div class="vertical-line-hidden"></div>
@@ -1220,8 +1228,8 @@
           </div>
           <div id="summary-score-t" class="summary-section-score"></div>
         </div>
+        <img id="graph" src="graph-de.png" alt="" />
       </div>
-      <img id="graph" src="graph.jpg" alt="" />
     </div>
   </body>
 </html>

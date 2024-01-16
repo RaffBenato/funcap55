@@ -31,6 +31,7 @@ const showGraph = document.getElementById("showGraph");
 
 const answers = document.getElementById("answers");
 const summary = document.getElementById("summary");
+const graph = document.getElementById("graph");
 
 const summaryScoreA = document.getElementById("summary-score-a");
 const summaryScoreB = document.getElementById("summary-score-b");
@@ -52,6 +53,7 @@ const scoreCircleG = document.getElementById("score-circle-g");
 const scoreCircleH = document.getElementById("score-circle-h");
 const scoreCircleT = document.getElementById("score-circle-t");
 const verticalLine = document.getElementById("vertical-line");
+
 const segmentWidth = verticalLine.offsetWidth;
 
 let totalAverageA = null;
@@ -621,13 +623,14 @@ const options = {
 };
 
 function handleIntersection(entries) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      answers.style.display = "none";
-    } else {
-      answers.style.display = "block";
-    }
-  });
+  const summaryEntry = entries[0];
+  if (summaryEntry.isIntersecting) {
+    // "summary" is in view, hide "answers"
+    answers.style.display = "none";
+  } else {
+    // "summary" is out of view, show "answers"
+    answers.style.display = "block";
+  }
 }
 
 const observer = new IntersectionObserver(handleIntersection, options);
