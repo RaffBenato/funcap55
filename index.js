@@ -27,11 +27,9 @@ const saveF = document.getElementById("saveF");
 const saveG = document.getElementById("saveG");
 const saveH = document.getElementById("saveH");
 const saveAll = document.getElementById("saveAll");
-const showGraph = document.getElementById("showGraph");
 
 const answers = document.getElementById("answers");
 const summary = document.getElementById("summary");
-const graph = document.getElementById("graph");
 
 const summaryScoreA = document.getElementById("summary-score-a");
 const summaryScoreB = document.getElementById("summary-score-b");
@@ -573,10 +571,6 @@ saveH.addEventListener("click", function () {
 
 saveAll.addEventListener("click", function () {
   saveFormData();
-});
-
-showGraph.addEventListener("click", function () {
-  window.location.href = "trends.html";
 });
 
 function saveFormData() {
