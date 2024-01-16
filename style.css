@@ -40,6 +40,19 @@ body {
   text-align: justify;
 }
 
+.text {
+  padding-bottom: 20px;
+  margin: 0px 20px 20px 20px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .answers {
   background-color: beige;
   padding: 5px 30px 5px 30px;
@@ -118,6 +131,15 @@ body {
   justify-content: space-around;
 }
 
+.summary-button {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .btn {
   cursor: pointer;
   width: 150px;
@@ -130,14 +152,89 @@ body {
   color: white;
 }
 
-.hidden {
-  display: none;
-}
-
 .summary {
   width: 100%;
   padding-bottom: 30px;
   background-color: rgb(90, 90, 90);
+}
+
+.summary-section-keys {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 1%);
+  width: 400px;
+  background-color: rgba(27, 25, 25, 0.5);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.summary-key {
+  min-height: 40px;
+  margin-left: 50px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.key-a {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(23, 160, 210);
+}
+.key-b {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(0, 115, 33);
+}
+.key-c {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(175, 12, 94);
+}
+.key-d {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(191, 109, 109);
+}
+.key-e {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(134, 83, 21);
+}
+.key-f {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(106, 178, 126);
+}
+.key-g {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(7, 5, 101);
+}
+.key-h {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(206, 46, 134);
+}
+.key-t {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+  color: rgb(168, 184, 24);
+}
+
+#showKey {
+  margin: 20px;
 }
 
 .summary-title {
@@ -164,15 +261,18 @@ body {
 
 .summary-section-tile {
   min-width: 10%;
-  margin-left: 20px;
+  max-width: 10%;
+  margin-left: 10px;
   color: white;
   font-size: 1.5rem;
 }
+
 .summary-section-tile-total {
   min-width: 10%;
-  margin-left: 20px;
+  max-width: 10%;
+  margin-left: 10px;
   color: white;
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .summary-section-score {
@@ -198,11 +298,7 @@ body {
   margin-right: 20px;
   margin-left: 20px;
   width: 100%;
-  height: 40px;
   background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-left: rgb(95, 95, 95) 2px solid;
 }
 
@@ -255,6 +351,10 @@ body {
 }
 #score-circle-t {
   border: solid 5px rgb(168, 184, 24);
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (max-width: 700px) {

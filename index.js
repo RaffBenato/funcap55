@@ -17,6 +17,7 @@ const clearF = document.getElementById("clearF");
 const clearG = document.getElementById("clearG");
 const clearH = document.getElementById("clearH");
 const clearAll = document.getElementById("clearAll");
+const showKey = document.getElementById("showKey");
 
 const saveA = document.getElementById("saveA");
 const saveB = document.getElementById("saveB");
@@ -30,6 +31,7 @@ const saveAll = document.getElementById("saveAll");
 
 const answers = document.getElementById("answers");
 const summary = document.getElementById("summary");
+const key = document.getElementById("key");
 
 const summaryScoreA = document.getElementById("summary-score-a");
 const summaryScoreB = document.getElementById("summary-score-b");
@@ -573,6 +575,12 @@ saveAll.addEventListener("click", function () {
   saveFormData();
 });
 
+if (showKey) {
+  showKey.addEventListener("click", function () {
+    key.classList.toggle("hidden");
+  });
+}
+
 function saveFormData() {
   const formData = {};
 
@@ -613,7 +621,7 @@ function loadFormData() {
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.5,
+  threshold: 0.3,
 };
 
 function handleIntersection(entries) {
