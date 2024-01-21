@@ -1072,19 +1072,54 @@
       </div>
 
       <div class="section">
-        <div class="score">
-          Your Score:
+        <div class="score-avg">
+          The average score for your answers for each section is:
           <span id="average-total" class="total-average">-</span>
+          This is for your reference only and does not represent an overall
+          score for your questionnare.
         </div>
 
         <div class="buttons">
           <button id="clearAll" class="btn">CLEAR ALL</button>
           <button id="saveAll" class="btn">SAVE</button>
-          <button id="showGraph" class="btn hidden">TRENDS</button>
         </div>
       </div>
       <div id="summary" class="summary">
-        <h1 class="summary-title">Summary</h1>
+        <h1 class="summary-title">
+          Summary
+          <div class="summary=button">
+            <button id="showKey" class="btn">Show Key</button>
+          </div>
+        </h1>
+        <div id="key" class="summary-section-keys hidden">
+          <div class="summary-key">
+            <span class="key-a">Ꮖ</span>A - Personal hygiene / Basic functions
+          </div>
+          <div class="summary-key">
+            <span class="key-b">Ꮖ</span>B - Walking / Moving around
+          </div>
+          <div class="summary-key">
+            <span class="key-c">Ꮖ</span>C - Being upright
+          </div>
+          <div class="summary-key">
+            <span class="key-d">Ꮖ</span>D - Activities in the home
+          </div>
+          <div class="summary-key">
+            <span class="key-e">Ꮖ</span>E - Communication
+          </div>
+          <div class="summary-key">
+            <span class="key-f">Ꮖ</span>F - Activities outside your home
+          </div>
+          <div class="summary-key">
+            <span class="key-g">Ꮖ</span>G - Reactions to light and sound
+          </div>
+          <div class="summary-key">
+            <span class="key-h">Ꮖ</span>H - Concentration
+          </div>
+          <div class="summary-key">
+            <span class="key-t">Ꮖ</span>Average score
+          </div>
+        </div>
         <div class="summary-section">
           <div class="summary-section-tile">A</div>
           <div class="summary-section-block">
@@ -1206,7 +1241,7 @@
           <div id="summary-score-h" class="summary-section-score">-</div>
         </div>
         <div class="summary-section">
-          <div class="summary-section-tile-total">TOTAL</div>
+          <div class="summary-section-tile-total">Avg</div>
           <div class="summary-section-block">
             <div id="score-circle-t" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
@@ -1220,7 +1255,35 @@
           </div>
           <div id="summary-score-t" class="summary-section-score"></div>
         </div>
-        <img class="graph" src="graph-en.png" alt="" />
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <img class="graph" src="graph-md-en.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+        <div class="text">
+          <p class="para">
+            Description: Showing Mean (+ - 1 Standard Deviation) A to H
+            sub-scores and Total Score on the FUNCAP27 questionnaire for the
+            1263 ME/CFS and 178 healthy control (HC) respondent's classification
+            of ME/CFS severity as follows: <br />
+            Very severe: 19 - Totally bedbound and in need of care for basic
+            functions. <br />
+            Severe: 136 - Mostly bedridden. <br />
+            Moderate: 733 - Mostly housebound. <br />
+            Mild: 360 - At least 50% reduction in pre-illness activity level.
+            <br />
+            better than mild: 15 - Less than 50% reduction in pre-illness
+            activity level.
+          </p>
+          <p class="para">
+            Source: Assessing Functional Capacity in ME/CFS: A Patient informed
+            Questionnaire. Authors: Kristian Sommerfelt, Trude Schei, Katharine
+            A Seton, Simon R Carding; Posted Date: 29 September 2023; doi:
+            10.20944/preprints202309.2091.v1
+          </p>
+        </div>
       </div>
     </div>
   </body>

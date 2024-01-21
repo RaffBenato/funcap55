@@ -83,6 +83,13 @@ body {
   font-size: 3rem;
 }
 
+.score-avg {
+  margin: 20px 0 20px 0;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .title-average {
   font-size: 2.5rem;
   padding-left: 10px;
@@ -91,7 +98,7 @@ body {
 }
 
 .total-average {
-  font-size: 4rem;
+  font-size: 2rem;
   padding-left: 10px;
   padding-right: 10px;
   background-color: rgb(40, 40, 40);
