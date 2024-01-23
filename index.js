@@ -8,6 +8,20 @@ const averageG = document.getElementById("title-average-g");
 const averageH = document.getElementById("title-average-h");
 const averageTotal = document.getElementById("average-total");
 
+const pdfaverageA = document.getElementById("pdf-summary-a");
+const pdfaverageB = document.getElementById("pdf-summary-b");
+const pdfaverageC = document.getElementById("pdf-summary-c");
+const pdfaverageD = document.getElementById("pdf-summary-d");
+const pdfaverageE = document.getElementById("pdf-summary-e");
+const pdfaverageF = document.getElementById("pdf-summary-f");
+const pdfaverageG = document.getElementById("pdf-summary-g");
+const pdfaverageH = document.getElementById("pdf-summary-h");
+const pdfaverageTotal = document.getElementById("pdf-summary-t");
+const pdfquestionsContainer = document.getElementById(
+  "pdf-questions-container"
+);
+const questions = document.querySelectorAll(".question-text");
+
 const clearA = document.getElementById("clearA");
 const clearB = document.getElementById("clearB");
 const clearC = document.getElementById("clearC");
@@ -29,6 +43,7 @@ const saveG = document.getElementById("saveG");
 const saveH = document.getElementById("saveH");
 const saveAll = document.getElementById("saveAll");
 const saveToPDF = document.getElementById("savetoPDF");
+const element = document.getElementById("element");
 
 const answers = document.getElementById("answers");
 const summary = document.getElementById("summary");
@@ -577,7 +592,48 @@ saveAll.addEventListener("click", function () {
 });
 
 saveToPDF.addEventListener("click", function () {
-  html2pdf(answers);
+  pdfaverageA.innerHTML = averageA.innerHTML;
+  pdfaverageB.innerHTML = averageB.innerHTML;
+  pdfaverageC.innerHTML = averageC.innerHTML;
+  pdfaverageD.innerHTML = averageD.innerHTML;
+  pdfaverageE.innerHTML = averageE.innerHTML;
+  pdfaverageF.innerHTML = averageF.innerHTML;
+  pdfaverageG.innerHTML = averageG.innerHTML;
+  pdfaverageH.innerHTML = averageH.innerHTML;
+  pdfaverageTotal.innerHTML = averageTotal.innerHTML;
+
+  let questionsHTML = ``;
+
+  questions.forEach(function (question, index) {
+    const currentQuestionId = "q" + (index + 1);
+    const currentQuestionElement = document.getElementById(currentQuestionId);
+
+    questionsHTML += `
+    <div class="pdf-questions">
+    <div class="pdf-questions-text">${question.innerHTML}</div>
+    <div class="pdf-questions-score">${currentQuestionElement.value}</div>
+  </div>`;
+  });
+
+  pdfquestionsContainer.innerHTML = questionsHTML;
+
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2, "0");
+  let mm = String(today.getMonth() + 1).padStart(2, "0");
+  let yyyy = today.getFullYear();
+  today = dd + mm + yyyy;
+
+  let opt = {
+    margin: 1,
+    filename: "funcap[" + today + "].pdf",
+    image: { type: "jpeg", quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+  };
+
+  element.classList.toggle("hidden");
+  html2pdf(element, opt);
+  element.classList.toggle("hidden");
 });
 
 if (showKey) {

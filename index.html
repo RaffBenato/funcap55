@@ -9,10 +9,7 @@
 
     <script src="./index.js" defer></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
-      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.js"
       defer
     ></script>
   </head>
@@ -33,6 +30,12 @@
           as necessary travelling. <br />
           It is a good idea to answer the questionnaire together with someone
           who sees you in everyday life.
+        </p>
+        <p class="para">
+          Link to study
+          <a href="https://www.preprints.org/manuscript/202309.2091/v1"
+            ><strong>HERE</strong></a
+          >
         </p>
       </div>
 
@@ -1089,7 +1092,7 @@
         <div class="buttons">
           <button id="clearAll" class="btn">CLEAR ALL</button>
           <button id="saveAll" class="btn">SAVE</button>
-          <button id="savetoPDF" class="btn hidden">SAVE TO PDF</button>
+          <button id="savetoPDF" class="btn">SAVE TO PDF</button>
         </div>
       </div>
       <div id="summary" class="summary">
@@ -1291,6 +1294,87 @@
             A Seton, Simon R Carding; Posted Date: 29 September 2023; doi:
             10.20944/preprints202309.2091.v1
           </p>
+        </div>
+      </div>
+    </div>
+    <div id="element" class="hidden">
+      <h2>FUNCAP55</h2>
+      <br />
+      <h2>Functional Capacity Questionnaire</h2>
+      <p class="para">
+        This questionnaire evaluates your functional capacity for a range of
+        activities. No days are the same, base your response on an average day
+        during the last month, not the worst nor the best. <br />
+        If a question concerns an activity that you have not performed, such as
+        showering while seated because you always shower standing up, then score
+        as you think this activity would have affected you. Items described
+        include necessary activities to perform them. <br />
+        Example: "Going to a shop for groceries" includes getting dressed and as
+        necessary travelling. <br />
+        It is a good idea to answer the questionnaire together with someone who
+        sees you in everyday life.
+      </p>
+
+      <p class="para">
+        Link to study
+        <a href="https://www.preprints.org/manuscript/202309.2091/v1"
+          ><strong>HERE</strong></a
+        >
+      </p>
+      <h2>Summary</h2>
+      <div class="pdf-summary-section-keys">
+        <div class="pdf-summary pdf-summary-a">
+          A - Personal hygiene / Basic functions
+          <div id="pdf-summary-a" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-b">
+          B - Walking / Moving around
+          <div id="pdf-summary-b" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-c">
+          C - Being upright
+          <div id="pdf-summary-c" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-d">
+          D - Activities in the home
+          <div id="pdf-summary-d" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-e">
+          E - Communication
+          <div id="pdf-summary-e" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-f">
+          F - Activities outside your home
+          <div id="pdf-summary-f" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-g">
+          G - Reactions to light and sound
+          <div id="pdf-summary-g" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-h">
+          H - Concentration
+          <div id="pdf-summary-h" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-t">
+          Average score
+          <div id="pdf-summary-t" class="pdf-summary"></div>
+        </div>
+        <div class="html2pdf__page-break"></div>
+        <div>
+          <div class="answers">
+            <h2>Answers Key:</h2>
+            0: I cannot do this. <br />
+            1: My capacity will be severely reduced for at least three days.
+            <br />
+            2: I can do little else on the same day and for one to two days
+            afterwards. <br />
+            3: I can do little else on the same day. <br />
+            4: I must limit other activities on the same day. <br />
+            5: This rarely affects other activities. <br />
+            6: Unproblematic - does not affect other activities.
+          </div>
+          <h2>Questions:</h2>
+          <div id="pdf-questions-container"></div>
         </div>
       </div>
     </div>

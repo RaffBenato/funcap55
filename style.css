@@ -19,6 +19,9 @@ body {
   padding-bottom: 20px;
 }
 
+a {
+  text-decoration: none;
+}
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -314,6 +317,10 @@ body {
   width: 100%;
 }
 
+#element {
+  text-align: center;
+}
+
 .vertical-line {
   height: 100%;
   width: 100%;
@@ -358,6 +365,71 @@ body {
 }
 #score-circle-t {
   border: solid 5px rgb(168, 184, 24);
+}
+
+.pdf-summary {
+  padding: 6px;
+  font-size: 1.2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pdf-summary-a {
+  background-color: rgb(23, 160, 210);
+}
+.pdf-summary-b {
+  background-color: rgb(0, 115, 33);
+}
+.pdf-summary-c {
+  background-color: rgb(175, 12, 94);
+}
+.pdf-summary-d {
+  background-color: rgb(191, 109, 109);
+}
+.pdf-summary-e {
+  background-color: rgb(134, 83, 21);
+}
+.pdf-summary-f {
+  background-color: rgb(106, 178, 126);
+}
+.pdf-summary-g {
+  background-color: rgb(7, 5, 101);
+}
+.pdf-summary-h {
+  background-color: rgb(206, 46, 134);
+}
+.pdf-summary-t {
+  background-color: rgb(168, 184, 24);
+}
+
+#pdf-questions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pdf-questions {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px;
+  padding: 5px 0 5px 0;
+  border-bottom: 2px solid black;
+}
+
+.pdf-questions-text {
+  text-align: left;
+}
+
+.pdf-questions-score {
+  text-align: right;
+  width: 50px;
+  font-size: 1.5rem;
 }
 
 .hidden {
