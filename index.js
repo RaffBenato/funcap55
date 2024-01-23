@@ -28,6 +28,7 @@ const saveF = document.getElementById("saveF");
 const saveG = document.getElementById("saveG");
 const saveH = document.getElementById("saveH");
 const saveAll = document.getElementById("saveAll");
+const saveToPDF = document.getElementById("savetoPDF");
 
 const answers = document.getElementById("answers");
 const summary = document.getElementById("summary");
@@ -573,6 +574,10 @@ saveH.addEventListener("click", function () {
 
 saveAll.addEventListener("click", function () {
   saveFormData();
+});
+
+saveToPDF.addEventListener("click", function () {
+  html2pdf(answers);
 });
 
 if (showKey) {
