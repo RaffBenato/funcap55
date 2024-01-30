@@ -46,6 +46,9 @@ const saveToPDF = document.getElementById("savetoPDF");
 const element = document.getElementById("element");
 
 const answers = document.getElementById("answers");
+const answersPara = document.getElementById("para-answers");
+const answersShow = document.getElementById("answers-show");
+const answersHide = document.getElementById("answers-hide");
 const summary = document.getElementById("summary");
 const key = document.getElementById("key");
 
@@ -589,6 +592,18 @@ saveH.addEventListener("click", function () {
 
 saveAll.addEventListener("click", function () {
   saveFormData();
+});
+
+answersHide.addEventListener("click", function () {
+  answersPara.classList.add("hidden");
+  answersHide.classList.add("hidden");
+  answersShow.classList.remove("hidden");
+});
+
+answersShow.addEventListener("click", function () {
+  answersPara.classList.remove("hidden");
+  answersHide.classList.remove("hidden");
+  answersShow.classList.add("hidden");
 });
 
 saveToPDF.addEventListener("click", function () {
