@@ -20,6 +20,16 @@ const pdfaverageTotal = document.getElementById("pdf-summary-t");
 const pdfquestionsContainer = document.getElementById(
   "pdf-questions-container"
 );
+const pdfaverageScoreA = document.getElementById("pdf-summary-score-a");
+const pdfaverageScoreB = document.getElementById("pdf-summary-score-b");
+const pdfaverageScoreC = document.getElementById("pdf-summary-score-c");
+const pdfaverageScoreD = document.getElementById("pdf-summary-score-d");
+const pdfaverageScoreE = document.getElementById("pdf-summary-score-e");
+const pdfaverageScoreF = document.getElementById("pdf-summary-score-f");
+const pdfaverageScoreG = document.getElementById("pdf-summary-score-g");
+const pdfaverageScoreH = document.getElementById("pdf-summary-score-h");
+const pdfaverageScoreT = document.getElementById("pdf-summary-score-t");
+
 const questions = document.querySelectorAll(".question-text");
 
 const clearA = document.getElementById("clearA");
@@ -72,6 +82,16 @@ const scoreCircleG = document.getElementById("score-circle-g");
 const scoreCircleH = document.getElementById("score-circle-h");
 const scoreCircleT = document.getElementById("score-circle-t");
 const verticalLine = document.getElementById("vertical-line");
+
+const pdfScoreCircleA = document.getElementById("pdf-score-circle-a");
+const pdfScoreCircleB = document.getElementById("pdf-score-circle-b");
+const pdfScoreCircleC = document.getElementById("pdf-score-circle-c");
+const pdfScoreCircleD = document.getElementById("pdf-score-circle-d");
+const pdfScoreCircleE = document.getElementById("pdf-score-circle-e");
+const pdfScoreCircleF = document.getElementById("pdf-score-circle-f");
+const pdfScoreCircleG = document.getElementById("pdf-score-circle-g");
+const pdfScoreCircleH = document.getElementById("pdf-score-circle-h");
+const pdfScoreCircleT = document.getElementById("pdf-score-circle-t");
 
 const segmentWidth = verticalLine.offsetWidth;
 
@@ -371,91 +391,146 @@ function calculateScore() {
   if (averageTotal.innerHTML === "-") {
     summaryScoreT.innerHTML = "";
     scoreCircleT.style.display = "none";
+    pdfScoreCircleT.style.display = "none";
   } else {
     summaryScoreT.innerHTML = averageTotal.innerHTML;
     scoreCircleT.style.display = "block";
     scoreCircleT.style.left =
       (parseFloat(summaryScoreT.innerHTML) / 8) * 100 + `%`;
     scoreCircleT.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleT.style.display = "block";
+    pdfScoreCircleT.style.left =
+      (parseFloat(summaryScoreT.innerHTML) / 8) * 100 + `%`;
+    pdfScoreCircleT.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 
   if (totalAverageA === null) {
     scoreCircleA.style.display = "none";
     summaryScoreA.innerHTML = "-";
+
+    pdfScoreCircleA.style.display = "none";
   } else {
     summaryScoreA.innerHTML = totalAverageA;
     scoreCircleA.style.display = "block";
     scoreCircleA.style.left = (totalAverageA / 8) * 100 + `%`;
     scoreCircleA.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleA.style.display = "block";
+    pdfScoreCircleA.style.left = (totalAverageA / 8) * 100 + `%`;
+    pdfScoreCircleA.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 
   if (totalAverageB === null) {
     scoreCircleB.style.display = "none";
     summaryScoreB.innerHTML = "-";
+
+    pdfScoreCircleB.style.display = "none";
   } else {
     summaryScoreB.innerHTML = totalAverageB;
     scoreCircleB.style.display = "block";
     scoreCircleB.style.left = (totalAverageB / 8) * 100 + `%`;
     scoreCircleB.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleB.style.display = "block";
+    pdfScoreCircleB.style.left = (totalAverageB / 8) * 100 + `%`;
+    pdfScoreCircleB.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 
   if (totalAverageC === null) {
     scoreCircleC.style.display = "none";
     summaryScoreC.innerHTML = "-";
+
+    pdfScoreCircleC.style.display = "none";
   } else {
     summaryScoreC.innerHTML = totalAverageC;
     scoreCircleC.style.display = "block";
     scoreCircleC.style.left = (totalAverageC / 8) * 100 + `%`;
     scoreCircleC.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleC.style.display = "block";
+    pdfScoreCircleC.style.left = (totalAverageC / 8) * 100 + `%`;
+    pdfScoreCircleC.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 
   if (totalAverageD === null) {
     scoreCircleD.style.display = "none";
     summaryScoreD.innerHTML = "-";
+
+    pdfScoreCircleD.style.display = "none";
   } else {
     summaryScoreD.innerHTML = totalAverageD;
     scoreCircleD.style.display = "block";
     scoreCircleD.style.left = (totalAverageD / 8) * 100 + `%`;
     scoreCircleD.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleD.style.display = "block";
+    pdfScoreCircleD.style.left = (totalAverageD / 8) * 100 + `%`;
+    pdfScoreCircleD.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 
   if (totalAverageE === null) {
     scoreCircleE.style.display = "none";
     summaryScoreE.innerHTML = "-";
+
+    pdfScoreCircleE.style.display = "none";
   } else {
     summaryScoreE.innerHTML = totalAverageE;
     scoreCircleE.style.display = "block";
     scoreCircleE.style.left = (totalAverageE / 8) * 100 + `%`;
     scoreCircleE.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleE.style.display = "block";
+    pdfScoreCircleE.style.left = (totalAverageE / 8) * 100 + `%`;
+    pdfScoreCircleE.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
+
   if (totalAverageF === null) {
     scoreCircleF.style.display = "none";
     summaryScoreF.innerHTML = "-";
+
+    pdfScoreCircleF.style.display = "none";
   } else {
     summaryScoreF.innerHTML = totalAverageF;
     scoreCircleF.style.display = "block";
     scoreCircleF.style.left = (totalAverageF / 8) * 100 + `%`;
     scoreCircleF.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleF.style.display = "block";
+    pdfScoreCircleF.style.left = (totalAverageF / 8) * 100 + `%`;
+    pdfScoreCircleF.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 
   if (totalAverageG === null) {
     scoreCircleG.style.display = "none";
     summaryScoreG.innerHTML = "-";
+
+    pdfScoreCircleG.style.display = "none";
   } else {
     summaryScoreG.innerHTML = totalAverageG;
     scoreCircleG.style.display = "block";
     scoreCircleG.style.left = (totalAverageG / 8) * 100 + `%`;
     scoreCircleG.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleG.style.display = "block";
+    pdfScoreCircleG.style.left = (totalAverageG / 8) * 100 + `%`;
+    pdfScoreCircleG.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 
   if (totalAverageH === null) {
     scoreCircleH.style.display = "none";
     summaryScoreH.innerHTML = "-";
+
+    pdfScoreCircleH.style.display = "none";
   } else {
     summaryScoreH.innerHTML = totalAverageH;
     scoreCircleH.style.display = "block";
     scoreCircleH.style.left = (totalAverageH / 8) * 100 + `%`;
     scoreCircleH.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    pdfScoreCircleH.style.display = "block";
+    pdfScoreCircleH.style.left = (totalAverageH / 8) * 100 + `%`;
+    pdfScoreCircleH.style.transform = `translateX(${segmentWidth - 10}px)`;
   }
 }
 
@@ -607,15 +682,16 @@ answersShow.addEventListener("click", function () {
 });
 
 saveToPDF.addEventListener("click", function () {
-  pdfaverageA.innerHTML = averageA.innerHTML;
-  pdfaverageB.innerHTML = averageB.innerHTML;
-  pdfaverageC.innerHTML = averageC.innerHTML;
-  pdfaverageD.innerHTML = averageD.innerHTML;
-  pdfaverageE.innerHTML = averageE.innerHTML;
-  pdfaverageF.innerHTML = averageF.innerHTML;
-  pdfaverageG.innerHTML = averageG.innerHTML;
-  pdfaverageH.innerHTML = averageH.innerHTML;
-  pdfaverageTotal.innerHTML = averageTotal.innerHTML;
+  pdfaverageScoreA.innerHTML = pdfaverageA.innerHTML = averageA.innerHTML;
+  pdfaverageScoreB.innerHTML = pdfaverageB.innerHTML = averageB.innerHTML;
+  pdfaverageScoreC.innerHTML = pdfaverageC.innerHTML = averageC.innerHTML;
+  pdfaverageScoreD.innerHTML = pdfaverageD.innerHTML = averageD.innerHTML;
+  pdfaverageScoreE.innerHTML = pdfaverageE.innerHTML = averageE.innerHTML;
+  pdfaverageScoreF.innerHTML = pdfaverageF.innerHTML = averageF.innerHTML;
+  pdfaverageScoreG.innerHTML = pdfaverageG.innerHTML = averageG.innerHTML;
+  pdfaverageScoreH.innerHTML = pdfaverageH.innerHTML = averageH.innerHTML;
+  pdfaverageScoreT.innerHTML = pdfaverageTotal.innerHTML =
+    averageTotal.innerHTML;
 
   let questionsHTML = ``;
 

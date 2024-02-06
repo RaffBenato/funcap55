@@ -277,6 +277,14 @@ a {
   justify-content: space-between;
 }
 
+.pdf-summary-section {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .summary-section-tile {
   min-width: 10%;
   max-width: 10%;
@@ -293,10 +301,35 @@ a {
   font-size: 1rem;
 }
 
+.pdf-summary-section-tile {
+  min-width: 10%;
+  max-width: 10%;
+  margin-left: 10px;
+  color: black;
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+.pdf-summary-section-tile-total {
+  min-width: 10%;
+  max-width: 10%;
+  margin-left: 10px;
+  color: black;
+  background-color: white;
+  font-size: 1rem;
+}
+
 .summary-section-score {
   min-width: 10%;
   margin-right: 10px;
   color: white;
+  font-size: 1.5rem;
+}
+
+.pdf-summary-section-score {
+  min-width: 10%;
+  margin-right: 10px;
+  color: black;
   font-size: 1.5rem;
 }
 
@@ -325,6 +358,11 @@ a {
   width: 100%;
 }
 
+.pdf-graph {
+  width: 100%;
+  margin: auto;
+}
+
 #element {
   text-align: center;
 }
@@ -347,31 +385,40 @@ a {
   border-radius: 50%;
 }
 
-#score-circle-a {
+#score-circle-a,
+#pdf-score-circle-a {
   border: solid 5px rgb(23, 160, 210);
 }
-#score-circle-b {
+#score-circle-b,
+#pdf-score-circle-b {
   border: solid 5px rgb(0, 115, 33);
 }
-#score-circle-c {
+#score-circle-c,
+#pdf-score-circle-c {
   border: solid 5px rgb(175, 12, 94);
 }
-#score-circle-d {
+#score-circle-d,
+#pdf-score-circle-d {
   border: solid 5px rgb(191, 109, 109);
 }
-#score-circle-e {
+#score-circle-e,
+#pdf-score-circle-e {
   border: solid 5px rgb(134, 83, 21);
 }
-#score-circle-f {
+#score-circle-f,
+#pdf-score-circle-f {
   border: solid 5px rgb(106, 178, 126);
 }
-#score-circle-g {
+#score-circle-g,
+#pdf-score-circle-g {
   border: solid 5px rgb(7, 5, 101);
 }
-#score-circle-h {
+#score-circle-h,
+#pdf-score-circle-h {
   border: solid 5px rgb(206, 46, 134);
 }
-#score-circle-t {
+#score-circle-t,
+#pdf-score-circle-t {
   border: solid 5px rgb(168, 184, 24);
 }
 
