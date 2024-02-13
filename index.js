@@ -83,6 +83,24 @@ const scoreCircleH = document.getElementById("score-circle-h");
 const scoreCircleT = document.getElementById("score-circle-t");
 const verticalLine = document.getElementById("vertical-line");
 
+const scoreLineA = document.getElementById("score-line-a");
+const scoreLineB = document.getElementById("score-line-b");
+const scoreLineC = document.getElementById("score-line-c");
+const scoreLineD = document.getElementById("score-line-d");
+const scoreLineE = document.getElementById("score-line-e");
+const scoreLineF = document.getElementById("score-line-f");
+const scoreLineG = document.getElementById("score-line-g");
+const scoreLineH = document.getElementById("score-line-h");
+
+const pdfScoreLineA = document.getElementById("pdf-score-line-a");
+const pdfScoreLineB = document.getElementById("pdf-score-line-b");
+const pdfScoreLineC = document.getElementById("pdf-score-line-c");
+const pdfScoreLineD = document.getElementById("pdf-score-line-d");
+const pdfScoreLineE = document.getElementById("pdf-score-line-e");
+const pdfScoreLineF = document.getElementById("pdf-score-line-f");
+const pdfScoreLineG = document.getElementById("pdf-score-line-g");
+const pdfScoreLineH = document.getElementById("pdf-score-line-h");
+
 const pdfScoreCircleA = document.getElementById("pdf-score-circle-a");
 const pdfScoreCircleB = document.getElementById("pdf-score-circle-b");
 const pdfScoreCircleC = document.getElementById("pdf-score-circle-c");
@@ -410,6 +428,9 @@ function calculateScore() {
     summaryScoreA.innerHTML = "-";
 
     pdfScoreCircleA.style.display = "none";
+
+    scoreLineA.style.display = "none";
+    pdfScoreLineA.style.display = "none";
   } else {
     summaryScoreA.innerHTML = totalAverageA;
     scoreCircleA.style.display = "block";
@@ -419,6 +440,13 @@ function calculateScore() {
     pdfScoreCircleA.style.display = "block";
     pdfScoreCircleA.style.left = (totalAverageA / 8) * 100 + `%`;
     pdfScoreCircleA.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineA.style.display = "block";
+    scoreLineA.style.left = (totalAverageA / 8) * 100 + `%`;
+    scoreLineA.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineA.style.display = "block";
+    pdfScoreLineA.style.left = totalAverageA * 54.5 + 54.5 + "px";
   }
 
   if (totalAverageB === null) {
@@ -426,6 +454,10 @@ function calculateScore() {
     summaryScoreB.innerHTML = "-";
 
     pdfScoreCircleB.style.display = "none";
+
+    scoreLineB.style.display = "none";
+
+    pdfScoreLineB.style.display = "none";
   } else {
     summaryScoreB.innerHTML = totalAverageB;
     scoreCircleB.style.display = "block";
@@ -435,6 +467,13 @@ function calculateScore() {
     pdfScoreCircleB.style.display = "block";
     pdfScoreCircleB.style.left = (totalAverageB / 8) * 100 + `%`;
     pdfScoreCircleB.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineB.style.display = "block";
+    scoreLineB.style.left = (totalAverageB / 8) * 100 + `%`;
+    scoreLineB.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineB.style.display = "block";
+    pdfScoreLineB.style.left = totalAverageB * 54.5 + 54.5 + "px";
   }
 
   if (totalAverageC === null) {
@@ -442,6 +481,10 @@ function calculateScore() {
     summaryScoreC.innerHTML = "-";
 
     pdfScoreCircleC.style.display = "none";
+
+    scoreLineC.style.display = "none";
+
+    pdfScoreLineC.style.display = "none";
   } else {
     summaryScoreC.innerHTML = totalAverageC;
     scoreCircleC.style.display = "block";
@@ -451,6 +494,13 @@ function calculateScore() {
     pdfScoreCircleC.style.display = "block";
     pdfScoreCircleC.style.left = (totalAverageC / 8) * 100 + `%`;
     pdfScoreCircleC.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineC.style.display = "block";
+    scoreLineC.style.left = (totalAverageC / 8) * 100 + `%`;
+    scoreLineC.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineC.style.display = "block";
+    pdfScoreLineC.style.left = totalAverageC * 54.5 + 54.5 + "px";
   }
 
   if (totalAverageD === null) {
@@ -458,6 +508,10 @@ function calculateScore() {
     summaryScoreD.innerHTML = "-";
 
     pdfScoreCircleD.style.display = "none";
+
+    scoreLineD.style.display = "none";
+
+    pdfScoreLineD.style.display = "none";
   } else {
     summaryScoreD.innerHTML = totalAverageD;
     scoreCircleD.style.display = "block";
@@ -467,6 +521,13 @@ function calculateScore() {
     pdfScoreCircleD.style.display = "block";
     pdfScoreCircleD.style.left = (totalAverageD / 8) * 100 + `%`;
     pdfScoreCircleD.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineD.style.display = "block";
+    scoreLineD.style.left = (totalAverageD / 8) * 100 + `%`;
+    scoreLineD.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineD.style.display = "block";
+    pdfScoreLineD.style.left = totalAverageD * 54.5 + 54.5 + "px";
   }
 
   if (totalAverageE === null) {
@@ -474,6 +535,10 @@ function calculateScore() {
     summaryScoreE.innerHTML = "-";
 
     pdfScoreCircleE.style.display = "none";
+
+    scoreLineE.style.display = "none";
+
+    pdfScoreLineE.style.display = "none";
   } else {
     summaryScoreE.innerHTML = totalAverageE;
     scoreCircleE.style.display = "block";
@@ -483,6 +548,13 @@ function calculateScore() {
     pdfScoreCircleE.style.display = "block";
     pdfScoreCircleE.style.left = (totalAverageE / 8) * 100 + `%`;
     pdfScoreCircleE.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineE.style.display = "block";
+    scoreLineE.style.left = (totalAverageE / 8) * 100 + `%`;
+    scoreLineE.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineE.style.display = "block";
+    pdfScoreLineE.style.left = totalAverageE * 54.5 + 54.5 + "px";
   }
 
   if (totalAverageF === null) {
@@ -490,6 +562,10 @@ function calculateScore() {
     summaryScoreF.innerHTML = "-";
 
     pdfScoreCircleF.style.display = "none";
+
+    scoreLineF.style.display = "none";
+
+    pdfScoreLineF.style.display = "none";
   } else {
     summaryScoreF.innerHTML = totalAverageF;
     scoreCircleF.style.display = "block";
@@ -499,6 +575,13 @@ function calculateScore() {
     pdfScoreCircleF.style.display = "block";
     pdfScoreCircleF.style.left = (totalAverageF / 8) * 100 + `%`;
     pdfScoreCircleF.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineF.style.display = "block";
+    scoreLineF.style.left = (totalAverageF / 8) * 100 + `%`;
+    scoreLineF.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineF.style.display = "block";
+    pdfScoreLineF.style.left = totalAverageF * 54.5 + 54.5 + "px";
   }
 
   if (totalAverageG === null) {
@@ -506,6 +589,10 @@ function calculateScore() {
     summaryScoreG.innerHTML = "-";
 
     pdfScoreCircleG.style.display = "none";
+
+    scoreLineG.style.display = "none";
+
+    pdfScoreLineG.style.display = "none";
   } else {
     summaryScoreG.innerHTML = totalAverageG;
     scoreCircleG.style.display = "block";
@@ -515,6 +602,13 @@ function calculateScore() {
     pdfScoreCircleG.style.display = "block";
     pdfScoreCircleG.style.left = (totalAverageG / 8) * 100 + `%`;
     pdfScoreCircleG.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineG.style.display = "block";
+    scoreLineG.style.left = (totalAverageG / 8) * 100 + `%`;
+    scoreLineG.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineG.style.display = "block";
+    pdfScoreLineG.style.left = totalAverageG * 54.5 + 54.5 + "px";
   }
 
   if (totalAverageH === null) {
@@ -522,6 +616,10 @@ function calculateScore() {
     summaryScoreH.innerHTML = "-";
 
     pdfScoreCircleH.style.display = "none";
+
+    scoreLineH.style.display = "none";
+
+    pdfScoreLineH.style.display = "none";
   } else {
     summaryScoreH.innerHTML = totalAverageH;
     scoreCircleH.style.display = "block";
@@ -531,6 +629,13 @@ function calculateScore() {
     pdfScoreCircleH.style.display = "block";
     pdfScoreCircleH.style.left = (totalAverageH / 8) * 100 + `%`;
     pdfScoreCircleH.style.transform = `translateX(${segmentWidth - 10}px)`;
+
+    scoreLineH.style.display = "block";
+    scoreLineH.style.left = (totalAverageH / 8) * 100 + `%`;
+    scoreLineH.style.transform = `translateX(${segmentWidth - 2}px)`;
+
+    pdfScoreLineH.style.display = "block";
+    pdfScoreLineH.style.left = totalAverageH * 54.5 + 54.5 + "px";
   }
 }
 
@@ -773,7 +878,7 @@ function loadFormData() {
 const options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.3,
+  threshold: 0.1,
 };
 
 function handleIntersection(entries) {

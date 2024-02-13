@@ -56,6 +56,55 @@ a {
   justify-content: space-between;
 }
 
+.text-m {
+  width: 90%;
+  padding-bottom: 20px;
+  margin: 20px 20px 20px 20px;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-text-m {
+  width: 90%;
+  padding-bottom: 20px;
+  margin: 20px 20px 20px 20px;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-sm {
+  padding-bottom: 20px;
+  margin: 20px 20px 20px 20px;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-xs {
+  font-size: 1rem;
+  color: white;
+}
+
 .answers {
   background-color: beige;
   padding: 5px 30px 5px 30px;
@@ -277,14 +326,6 @@ a {
   justify-content: space-between;
 }
 
-.pdf-summary-section {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .summary-section-tile {
   min-width: 10%;
   max-width: 10%;
@@ -326,13 +367,6 @@ a {
   font-size: 1.5rem;
 }
 
-.pdf-summary-section-score {
-  min-width: 10%;
-  margin-right: 10px;
-  color: black;
-  font-size: 1.5rem;
-}
-
 .summary-section-block {
   position: relative;
   margin-right: 20px;
@@ -346,21 +380,15 @@ a {
 }
 
 .summary-section-graph {
+  position: relative;
+  margin-top: 4px;
   margin-right: 20px;
   margin-left: 20px;
   width: 100%;
-  background-color: white;
-  border-left: rgb(95, 95, 95) 2px solid;
 }
 
 .graph {
-  margin-top: 20px;
   width: 100%;
-}
-
-.pdf-graph {
-  width: 100%;
-  margin: auto;
 }
 
 #element {
@@ -383,6 +411,14 @@ a {
   height: 20px;
   width: 20px;
   border-radius: 50%;
+}
+
+.score-line {
+  position: absolute;
+  height: 97%;
+  width: 3px;
+  color: red;
+  background-color: red;
 }
 
 #score-circle-a,
@@ -420,6 +456,22 @@ a {
 #score-circle-t,
 #pdf-score-circle-t {
   border: solid 5px rgb(168, 184, 24);
+}
+
+.pdf-summary-section-graph {
+  position: relative;
+  margin-top: 4px;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.pdf-summary-section {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .pdf-summary {
@@ -485,6 +537,26 @@ a {
   text-align: right;
   width: 50px;
   font-size: 1.5rem;
+}
+
+.pdf-score-line {
+  position: absolute;
+  height: 146px;
+  width: 3px;
+  color: red;
+  background-color: red;
+}
+
+.pdf-summary-section-score {
+  min-width: 10%;
+  margin-right: 10px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.pdf-graph {
+  width: 100%;
+  margin: auto;
 }
 
 .hidden {
