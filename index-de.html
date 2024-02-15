@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>FUNCAP55 Functional Capacity - DE-German language</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>FUNCAP55 Fragebogen zur funktionalen Kapazität</title>
 
     <script src="./index.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.js"
+      defer
+    ></script>
   </head>
   <body onload="loadFormDataOnLoad()">
     <div class="container">
@@ -30,18 +41,52 @@
           Es ist eine gute Idee, den Fragebogen gemeinsam mit einer Person zu
           beantworten, die Sie im Alltag erlebt.
         </p>
+        <p class="para">
+          Bitte beachten Sie, dass der Fragebogen entwickelt wurde, um die
+          funktionelle Kapazität einer Person mit ME/CFS zu bewerten. Es wird
+          NICHT empfohlen, ihn für den Vergleich einer Person mit einer anderen
+          zu verwenden.<br />
+
+          Am Ende dieser Seite finden Sie ein Diagramm mit den Antworten von
+          über 1.000 ME/CFS-Patienten auf den FUNCAP27-Fragebogen. Wenn Sie
+          dieses Diagramm mit Ihren eigenen Ergebnissen vergleichen, bedenken
+          Sie bitte, dass dies kein gültiges Diagnosetool für Ihren Schweregrad
+          ist.<br />
+
+          Wie Sie jedoch Ihre individuellen Ergebnisse nutzen können:<br />
+          1. Drucken Sie den Fragebogen mit Ihren Antworten für Arzttermine oder
+          als Anlage zu Anträgen (z. B. GdB, Pflegegrad etc.) aus, um Ihre
+          aktuelle Funktionsfähigkeit aufzuzeigen.<br />
+          2. Verfolgen Sie Ihren persönlichen Entwicklungsverlauf, indem Sie den
+          Test in regelmäßigen Abständen wiederholen (speichern Sie Ihre
+          Ergebnisse jedes Mal, z. B. durch Ausdrucken, Screenshots,
+          Aufschreiben der Antworten...). <br />
+          Link zur Studie mit ausführlichen Hintergrundinformationen
+          <a href="https://www.preprints.org/manuscript/202309.2091/v1"
+            ><strong>HIER</strong></a
+          >
+        </p>
       </div>
 
       <div id="answers" class="answers">
-        0: Ich schaffe das nicht. <br />
-        1: Meine Kapazität wird für mindestens drei Tage stark eingeschränkt
-        sein. <br />
-        2: Ich kann am selben Tag und für ein bis zwei Tage danach kaum etwas
-        anderes tun. <br />
-        3: Ich kann am selben Tag kaum etwas anderes tun. <br />
-        4: Ich muss andere Aktivitäten am selben Tag einschränken. <br />
-        5: Andere Tätigkeiten werden dadurch kaum beeinträchtigt. <br />
-        6: Unproblematisch - beeinträchtigt keine anderen Aktivitäten.
+        <p id="para-answers">
+          0: Ich schaffe das nicht. <br />
+          1: Meine Kapazität wird für mindestens drei Tage stark eingeschränkt
+          sein. <br />
+          2: Ich kann am selben Tag und für ein bis zwei Tage danach kaum etwas
+          anderes tun. <br />
+          3: Ich kann am selben Tag kaum etwas anderes tun. <br />
+          4: Ich muss andere Aktivitäten am selben Tag einschränken. <br />
+          5: Andere Tätigkeiten werden dadurch kaum beeinträchtigt. <br />
+          6: Unproblematisch - beeinträchtigt keine anderen Aktivitäten.
+        </p>
+
+        <button id="answers-hide" class="btn-hide">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <button id="answers-show" class="btn-hide hidden">
+          <i class="fa-solid fa-arrow-down"></i>
+        </button>
       </div>
 
       <div class="section">
@@ -903,7 +948,7 @@
 
       <div class="section">
         <div class="title">
-          H - Concentration
+          H - Konzentration
           <span id="title-average-h" class="title-average">-</span>
         </div>
 
@@ -1080,7 +1125,7 @@
       </div>
 
       <div class="section">
-        <div class="score">
+        <div class="score hidden">
           Your Score:
           <span id="average-total" class="total-average">-</span>
         </div>
@@ -1088,11 +1133,46 @@
         <div class="buttons">
           <button id="clearAll" class="btn">ALLES LÖSCHEN</button>
           <button id="saveAll" class="btn">SPEICHERN</button>
-          <button id="showGraph" class="btn hidden">TRENDS</button>
+          <button id="savetoPDF" class="btn">ALS PDF SPEICHERN</button>
         </div>
       </div>
       <div id="summary" class="summary">
-        <h1 class="summary-title">Zusammenfassung</h1>
+        <h1 class="summary-title">
+          Zusammenfassung
+          <div class="summary=button">
+            <button id="showKey" class="btn">Legende anzeigen</button>
+          </div>
+        </h1>
+        <div id="key" class="summary-section-keys hidden">
+          <div class="summary-key">
+            <span class="key-a">Ꮖ</span>A - Körperpflege / Grundfunktionen
+          </div>
+          <div class="summary-key">
+            <span class="key-b">Ꮖ</span>B - Gehen - sich fortbewegen
+          </div>
+          <div class="summary-key">
+            <span class="key-c">Ꮖ</span>C - Aufrecht sein
+          </div>
+          <div class="summary-key">
+            <span class="key-d">Ꮖ</span>D - Aktivitäten in der Wohnung
+          </div>
+          <div class="summary-key">
+            <span class="key-e">Ꮖ</span>E - Kommunikation
+          </div>
+          <div class="summary-key">
+            <span class="key-f">Ꮖ</span>F - Aktivitäten außerhalb der eigenen
+            Wohnung
+          </div>
+          <div class="summary-key">
+            <span class="key-g">Ꮖ</span>G - Reaktionen auf Licht und Schall
+          </div>
+          <div class="summary-key">
+            <span class="key-h">Ꮖ</span>H - Konzentration
+          </div>
+          <div class="summary-key hidden">
+            <span class="key-t">Ꮖ</span>Average score
+          </div>
+        </div>
         <div class="summary-section">
           <div class="summary-section-tile">A</div>
           <div class="summary-section-block">
@@ -1213,8 +1293,8 @@
           </div>
           <div id="summary-score-h" class="summary-section-score">-</div>
         </div>
-        <div class="summary-section">
-          <div class="summary-section-tile-total">GESAMT</div>
+        <div class="summary-section hidden">
+          <div class="summary-section-tile-total">Avg</div>
           <div class="summary-section-block">
             <div id="score-circle-t" class="score-circle hidden"></div>
             <div class="vertical-line"></div>
@@ -1228,7 +1308,554 @@
           </div>
           <div id="summary-score-t" class="summary-section-score"></div>
         </div>
-        <img class="graph" src="graph-de.png" alt="" />
+
+        <div class="summary-section">
+          <div class="text-sm">
+            And this is you compared to the answers of 1263 ME/CFS and 178
+            healthy people*: <br />
+            <span class="text-xs"
+              >*Please check the description at the end for reference and
+              source.</span
+            >
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="para">
+            <strong>Severety levels explained:</strong> <br />
+            • Very severe: Totally bedbound and in need of care for basic
+            functions (19 answers) <br />
+            • Severe: Mostly bedridden (136 answers) <br />
+            • Moderate: Mostly housebound (733 answers) <br />
+            • Mild: At least 50% reduction in pre-illness activity level (360
+            answers) <br />
+            • Better than mild: Less than 50% reductionin pre-illness activity
+            level (15 answers)
+          </div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">A - Körperpflege / Grundfunktionen</div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-a" class="score-line hidden"></div>
+            <img class="graph" src="graph-a-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">B - Gehen - sich fortbewegen</div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-b" class="score-line hidden"></div>
+            <img class="graph" src="graph-b-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">C - Aufrecht sein</div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-c" class="score-line hidden"></div>
+            <img class="graph" src="graph-c-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">D - Aktivitäten in der Wohnung</div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-d" class="score-line hidden"></div>
+            <img class="graph" src="graph-d-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">E - Kommunikation</div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-e" class="score-line hidden"></div>
+            <img class="graph" src="graph-e-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">
+            F - Aktivitäten außerhalb der eigenen Wohnung
+          </div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-f" class="score-line hidden"></div>
+            <img class="graph" src="graph-f-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">G - Reaktionen auf Licht und Schall</div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-g" class="score-line hidden"></div>
+            <img class="graph" src="graph-g-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="summary-section">
+          <div class="text-m">H - Konzentration</div>
+        </div>
+        <div class="summary-section">
+          <div class="summary-section-tile"></div>
+          <div class="summary-section-graph">
+            <div id="score-line-h" class="score-line hidden"></div>
+            <img class="graph" src="graph-h-de.png" alt="" />
+          </div>
+          <div class="summary-section-score"></div>
+        </div>
+
+        <div class="text">
+          <p class="para">
+            Beschreibung: Zeigt den Mittelwert (+ - Standard-abweichung) der A-
+            bis H-Sub-Scores und den Gesamtscore des FUNCAP27-Fragebogens für
+            1263 Befragte mit ME/CFS und 178 gesunde Kontroll-personen (HC)
+            entsprechend der Einstufung des ME/CFS-Schweregrads durch die
+            Befragten wie folgt: <br />
+            Sehr schwer: 19 - Vollständig bettlägerig und pflegebedürftig für
+            grundlegende Verrichtungen<br />
+            Schwer: 136 - größtenteils bettlägerig<br />
+            Moderat: 733 - Überwiegend hausgebunden <br />
+            Mild: 360 - Mindestens 50%ige Einschränkung des Aktivitätsniveaus
+            vor der Erkrankung<br />
+            Besser als mild: 15 - weniger als 50 % Reduzierung des
+            Aktivitätsniveaus vor der Erkrankung.<br />
+          </p>
+          <p class="para">
+            Quelle: Assessing Functional Capacity in ME/CFS: A Patient Informed
+            Questionnaire; Autoren: Kristian Sommerfelt, Trude Schei, Katharine
+            A Seton, Simon R Carding; Datum: 29 September 2023; doi:
+            10.20944/preprints202309.2091.v1
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="element" class="hidden">
+      <h2>FUNCAP55</h2>
+      <br />
+      <h2>Fragebogen zur funktionalen Kapazität</h2>
+      <p class="para">
+        Dieser Fragebogen bewertet Ihre funktionelle Kapazität für eine Reihe
+        von Aktivitäten. Kein Tag ist wie der andere. Gehen Sie bei Ihrer
+        Antwort von einem durchschnittlichen Tag des letzten Monats aus, nicht
+        vom schlechtesten oder besten. <br />
+        Wenn sich eine Frage auf eine Tätigkeit bezieht, die Sie nicht
+        ausgeführt haben, z. B. Duschen im Sitzen, weil Sie immer im Stehen
+        duschen, dann bewerten Sie die Frage so, wie Sie glauben, dass diese
+        Tätigkeit Sie beeinträchtigt hätte. Zu den beschriebenen Tätigkeiten
+        gehören auch die zu ihrer Ausführung erforderlichen Aktivitäten.
+        <br />
+        Beispiel: "Zum Einkaufen gehen" schließt das Anziehen und ggf. die Fahrt
+        ein. <br />
+        Es ist eine gute Idee, den Fragebogen gemeinsam mit einer Person zu
+        beantworten, die Sie im Alltag erlebt.
+      </p>
+      <p class="para">
+        Bitte beachten Sie, dass der Fragebogen entwickelt wurde, um die
+        funktionelle Kapazität einer Person mit ME/CFS zu bewerten. Es wird
+        NICHT empfohlen, ihn für den Vergleich einer Person mit einer anderen zu
+        verwenden.<br />
+
+        Am Ende dieser Seite finden Sie ein Diagramm mit den Antworten von über
+        1.000 ME/CFS-Patienten auf den FUNCAP27-Fragebogen. Wenn Sie dieses
+        Diagramm mit Ihren eigenen Ergebnissen vergleichen, bedenken Sie bitte,
+        dass dies kein gültiges Diagnosetool für Ihren Schweregrad ist.<br />
+
+        Wie Sie jedoch Ihre individuellen Ergebnisse nutzen können:<br />
+        1. Drucken Sie den Fragebogen mit Ihren Antworten für Arzttermine oder
+        als Anlage zu Anträgen (z. B. GdB, Pflegegrad etc.) aus, um Ihre
+        aktuelle Funktionsfähigkeit aufzuzeigen.<br />
+        2. Verfolgen Sie Ihren persönlichen Entwicklungsverlauf, indem Sie den
+        Test in regelmäßigen Abständen wiederholen (speichern Sie Ihre
+        Ergebnisse jedes Mal, z. B. durch Ausdrucken, Screenshots, Aufschreiben
+        der Antworten...). <br />
+        Link zur Studie mit ausführlichen Hintergrundinformationen
+        <a href="https://www.preprints.org/manuscript/202309.2091/v1"
+          ><strong>HIER</strong></a
+        >
+      </p>
+
+      <div class="html2pdf__page-break"></div>
+
+      <h2>Zusammenfassung</h2>
+      <div class="pdf-summary-section-keys">
+        <div class="pdf-summary pdf-summary-a">
+          A - Körperpflege / Grundfunktionen
+          <div id="pdf-summary-a" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-b">
+          B - Gehen - sich fortbewegen
+          <div id="pdf-summary-b" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-c">
+          C - Aufrecht sein
+          <div id="pdf-summary-c" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-d">
+          D - Aktivitäten in der Wohnung
+          <div id="pdf-summary-d" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-e">
+          E - Kommunikation
+          <div id="pdf-summary-e" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-f">
+          F - Aktivitäten außerhalb der eigenen Wohnung
+          <div id="pdf-summary-f" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-g">
+          G - Reaktionen auf Licht und Schall
+          <div id="pdf-summary-g" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-h">
+          H - Konzentration
+          <div id="pdf-summary-h" class="pdf-summary"></div>
+        </div>
+        <div class="pdf-summary pdf-summary-t hidden">
+          Average score
+          <div id="pdf-summary-t" class="pdf-summary"></div>
+        </div>
+        <div class="html2pdf__page-break"></div>
+
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">A</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-a" class="score-circle hidden"></div>
+            <div id="vertical-line" class="vertical-line"></div>
+            <div class="vertical-line">0</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">2</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">4</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">6</div>
+          </div>
+          <div id="pdf-summary-score-a" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">B</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-b" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="pdf-summary-score-b" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">C</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-c" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="pdf-summary-score-c" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">D</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-d" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="pdf-summary-score-d" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">E</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-e" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="pdf-summary-score-e" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">F</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-f" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="pdf-summary-score-f" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">G</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-g" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="pdf-summary-score-g" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile">H</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-h" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line"></div>
+          </div>
+          <div id="pdf-summary-score-h" class="pdf-summary-section-score">
+            -
+          </div>
+        </div>
+        <div class="pdf-summary-section hidden">
+          <div class="pdf-summary-section-tile-total">Avg</div>
+          <div class="summary-section-block">
+            <div id="pdf-score-circle-t" class="score-circle hidden"></div>
+            <div class="vertical-line"></div>
+            <div class="vertical-line">0</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">2</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">4</div>
+            <div class="vertical-line-hidden"></div>
+            <div class="vertical-line">6</div>
+          </div>
+          <div id="pdf-summary-score-t" class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="para">
+          And this is you compared to the answers of 1263 ME/CFS and 178 healthy
+          people*: <br />
+          *Please check the description at the end for reference and source.
+          <br />
+
+          <strong>Severety levels explained:</strong> <br />
+          • Very severe: Totally bedbound and in need of care for basic
+          functions (19 answers) <br />
+          • Severe: Mostly bedridden (136 answers) <br />
+          • Moderate: Mostly housebound (733 answers) <br />
+          • Mild: At least 50% reduction in pre-illness activity level (360
+          answers) <br />
+          • Better than mild: Less than 50% reductionin pre-illness activity
+          level (15 answers)
+        </div>
+
+        <div class="pdf-summary-section">
+          <div class="pdf-text-m">A - Körperpflege / Grundfunktionen</div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-a" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-a-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="html2pdf__page-break"></div>
+
+        <div class="pdf-summary-section">
+          <div class="text-m">B - Gehen - sich fortbewegen</div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-b" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-b-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="pdf-summary-section">
+          <div class="text-m">C - Aufrecht sein</div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-c" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-c-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="pdf-summary-section">
+          <div class="text-m">D - Aktivitäten in der Wohnung</div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-d" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-d-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="html2pdf__page-break"></div>
+
+        <div class="pdf-summary-section">
+          <div class="text-m">E - Kommunikation</div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-e" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-e-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="pdf-summary-section">
+          <div class="text-m">
+            F - Aktivitäten außerhalb der eigenen Wohnung
+          </div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-f" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-f-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="pdf-summary-section">
+          <div class="text-m">G - Reaktionen auf Licht und Schall</div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-g" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-g-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <div class="html2pdf__page-break"></div>
+
+        <div class="pdf-summary-section">
+          <div class="text-m">H - Konzentration</div>
+        </div>
+        <div class="pdf-summary-section">
+          <div class="pdf-summary-section-tile"></div>
+          <div class="pdf-summary-section-graph">
+            <div id="pdf-score-line-h" class="pdf-score-line hidden"></div>
+            <img class="pdf-graph" src="graph-h-de.png" alt="" />
+          </div>
+          <div class="pdf-summary-section-score"></div>
+        </div>
+
+        <p class="para">
+          Beschreibung: Zeigt den Mittelwert (+ - Standard-abweichung) der A-
+          bis H-Sub-Scores und den Gesamtscore des FUNCAP27-Fragebogens für 1263
+          Befragte mit ME/CFS und 178 gesunde Kontroll-personen (HC)
+          entsprechend der Einstufung des ME/CFS-Schweregrads durch die
+          Befragten wie folgt: <br />
+          Sehr schwer: 19 - Vollständig bettlägerig und pflegebedürftig für
+          grundlegende Verrichtungen<br />
+          Schwer: 136 - größtenteils bettlägerig<br />
+          Moderat: 733 - Überwiegend hausgebunden <br />
+          Mild: 360 - Mindestens 50%ige Einschränkung des Aktivitätsniveaus vor
+          der Erkrankung<br />
+          Besser als mild: 15 - weniger als 50 % Reduzierung des
+          Aktivitätsniveaus vor der Erkrankung.<br />
+        </p>
+        <p class="para">
+          Quelle: Assessing Functional Capacity in ME/CFS: A Patient Informed
+          Questionnaire; Autoren: Kristian Sommerfelt, Trude Schei, Katharine A
+          Seton, Simon R Carding; Datum: 29 September 2023; doi:
+          10.20944/preprints202309.2091.v1
+        </p>
+
+        <div class="html2pdf__page-break"></div>
+        <div>
+          <div class="answers">
+            0: Ich schaffe das nicht. <br />
+            1: Meine Kapazität wird für mindestens drei Tage stark eingeschränkt
+            sein. <br />
+            2: Ich kann am selben Tag und für ein bis zwei Tage danach kaum
+            etwas anderes tun. <br />
+            3: Ich kann am selben Tag kaum etwas anderes tun. <br />
+            4: Ich muss andere Aktivitäten am selben Tag einschränken. <br />
+            5: Andere Tätigkeiten werden dadurch kaum beeinträchtigt. <br />
+            6: Unproblematisch - beeinträchtigt keine anderen Aktivitäten.
+          </div>
+          <h2>Fragen:</h2>
+          <div id="pdf-questions-container"></div>
+        </div>
       </div>
     </div>
   </body>
